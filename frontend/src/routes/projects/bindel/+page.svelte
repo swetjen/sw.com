@@ -13,7 +13,7 @@
   }
 
 </script>
-npm install @svelkit/spectre
+
 <svelte:head>
     <title>Spence Wetjen</title>
     <meta name="description" content="Spence Wetjen | Full Stack Developer"/>
