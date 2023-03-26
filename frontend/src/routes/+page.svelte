@@ -1,56 +1,10 @@
 <script lang="ts">
-  interface IProjectItem {
-    logo: string
-    brand: string
-    hero_image: string
-    title: string
-    summary: string
-    slug: string
-  }
+  import type {IProjectItem} from '../interfaces/iprojects';
+  import { Projects } from '../stores/projects';
 
-  let projects: IProjectItem[] = [
-    {
-      logo: '/logos/bindel.svg',
-      brand: 'The Bindel',
-      title: 'Vacation Rentals',
-      summary: 'What if you had a flexible housing provider that made it easy to live and work anywhere?',
-      hero_image: '/bg/bindel-bg.jpg',
-      slug: '/projects/bindel'
-    },
-    {
-      logo: '/logos/tethr.svg',
-      brand: 'Tethr',
-      title: 'Conversation Intelligence',
-      summary: 'What if customer and agent conversations could be searched, analyzed and automated?',
-      // summary: 'Tethr helps enterprise scale companies to sift through millions of customer phone calls surfacing latent customer insights, improving representative performance, and ensure compliance.',
-      hero_image: '/bg/tethr.webp',
-      slug: '/projects/tethr',
-    },
-    {
-      logo: '/logos/bby.svg',
-      title: 'Digital Tools',
-      brand: 'Best Buy',
-      summary: 'How do we bring order and efficiency to a dozens of one-off customer and employee applications?',
-      hero_image: '/bg/digitaltools.webp',
-      slug: '/projects/digital-tools',
-    },
-    {
-      logo: '/logos/bby.svg',
-      title: 'Store Demo',
-      brand: 'Best Buy',
-      summary: 'Building tools to help prospective laptop buyers compare product features.',
-      hero_image: '/bg/bbi.webp',
-      slug: '/projects/best-buy-interactive',
-    },
-    {
-      logo: '/logos/ea.svg',
-      title: 'Retail Kiosk',
-      brand: 'Best Buy',
-      summary: 'What if we build a browsable catalog of coming soon games?',
-      hero_image: '/bg/pots.webp',
-      slug: '/projects/gaming-kiosk',
-    },
-  ]
+  let projects: IProjectItem[]
+
+  Projects.subscribe(value => { projects = value })
 
 </script>
 
@@ -61,11 +15,12 @@
 
 <section class="my-10">
     <h1 class="leading-snug text-4xl font-light tracking-tight md:my-32 my-16 md:w-2/3 sm:w-full">
-        Full Stack Developer with a background in UX.  Previously I lead development for <a
-            class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700" href="https://tethr.com"
+        Full Stack Developer with a background in UX. Previously lead development for <a
+            class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700"
+            href="https://tethr.com"
             target="_blank">Tethr</a>, <a href="https://bestbuy.com" target="_blank"
                                           class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700">Best
-        Buy</a>, and others. &nbsp;&nbsp; Full stack developer, designer, and entrepreneur.
+        Buy</a>, and others.&nbsp;&nbsp;Full stack developer, designer, and entrepreneur.
     </h1>
 </section>
 
@@ -75,7 +30,7 @@
             <div class="md:h-96 -z-50 h-64 bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl "
                  style={`background-image: url('${p.hero_image}')`}>
                 <div class="w-full h-full flex flex-row text-center">&nbsp;
-                    <img class="inline-block mx-auto" width="125" src={p.logo}>
+                    <img class="inline-block mx-auto opacity-90" width="125" src={p.logo}>
                 </div>
             </div>
 
