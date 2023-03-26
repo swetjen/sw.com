@@ -1,6 +1,7 @@
 <script lang="ts">
   import type {IProjectItem} from '../../../interfaces/iprojects';
   import ProjectHero from '../../../components/projects/ProjectHero.svelte';
+  import TheBread from '../../../components/TheBread.svelte';
 
   let project: IProjectItem = {
     logo: '/logos/bindel.svg',
@@ -12,13 +13,14 @@
   }
 
 </script>
-
+npm install @svelkit/spectre
 <svelte:head>
     <title>Spence Wetjen</title>
     <meta name="description" content="Spence Wetjen | Full Stack Developer"/>
 </svelte:head>
 
 <section class="my-10">
+    <TheBread/>
     <ProjectHero project={project}/>
 </section>
 
