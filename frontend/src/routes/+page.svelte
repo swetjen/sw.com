@@ -60,7 +60,13 @@
 </svelte:head>
 
 <section class="my-10">
-    <h1 class="text-5xl">Todo - Intro text goes here</h1>
+    <h1 class="leading-snug text-4xl font-light tracking-tight md:my-32 my-16 md:w-2/3 sm:w-full">
+        Full Stack Developer with a background in UX.  Previously I lead development for <a
+            class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700" href="https://tethr.com"
+            target="_blank">Tethr</a>, <a href="https://bestbuy.com" target="_blank"
+                                          class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700">Best
+        Buy</a>, and others. &nbsp;&nbsp; Full stack developer, designer, and entrepreneur.
+    </h1>
 </section>
 
 <section class="my-10">

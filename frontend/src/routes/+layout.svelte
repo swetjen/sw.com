@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p class="my-5">todo</p>
+		<p class="mt-40 text-center font-bold">footer todo</p>
 	</footer>
 </div>
 
