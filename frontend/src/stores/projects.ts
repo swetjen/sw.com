@@ -6,7 +6,7 @@ let projectsDefault: IProjectItem[] = [
   {
     logo: '/logos/bindel.svg',
     brand: 'The Bindel',
-    title: 'Vacation Rentals',
+    title: 'Reservations Platform',
     summary: 'What if you had a flexible housing provider that made it easy to live and work anywhere?',
     hero_image: '/bg/bindel-bg.jpg',
     slug: '/projects/bindel'
@@ -14,7 +14,7 @@ let projectsDefault: IProjectItem[] = [
   {
     logo: '/logos/tethr.svg',
     brand: 'Tethr',
-    title: 'Conversation Intelligence',
+    title: 'Customer Intelligence',
     summary: 'What if customer and agent conversations could be searched, analyzed and automated?',
     // summary: 'Tethr helps enterprise scale companies to sift through millions of customer phone calls surfacing latent customer insights, improving representative performance, and ensure compliance.',
     hero_image: '/bg/tethr.webp',
