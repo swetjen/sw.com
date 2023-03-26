@@ -1,17 +1,17 @@
 <script>
-	import Header from '../components/Header.svelte';
+	import TheNav from '../components/TheNav.svelte';
 	import './app.css';
 </script>
 
-<div class="app">
-	<Header />
+<div class="app md:mx-4">
+	<TheNav />
 
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p class="my-5">todo</p>
 	</footer>
 </div>
 
