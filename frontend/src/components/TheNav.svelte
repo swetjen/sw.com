@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade, fly } from 'svelte/transition';
+  import { page } from '$app/stores';
 
   // menu and contact states
   let ProductOpen: boolean = false
@@ -162,7 +163,7 @@
                 {/if}
             </div>
 
-            <a href="/about" class="leading-6 nav-link">About</a>
+            <a href="/about" class:active={$page.url.pathname === "/about"} class="leading-6 nav-link">About</a>
 <!--            <a href="#" class="leading-6 nav-link">Marketplace</a>-->
 
 <!--            <div class="relative">-->

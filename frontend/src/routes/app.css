@@ -35,14 +35,14 @@ h1.card:hover {
 }
 
 .nav-link {
-    @apply text-2xl font-light
+    @apply text-2xl font-light border-b-2 border-white
 }
 
 .nav-link:hover {
     @apply underline text-blue-800 border-blue-800 no-underline border-b-2 dark:hover:border-blue-800
 }
 
-.nav-link.active-link {
+.nav-link.active {
     @apply text-blue-800 border-b-2 dark:border-gray-600
 }
 
