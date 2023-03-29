@@ -5,7 +5,6 @@
 
 <div class="app mx-4 md:mx-8">
 	<TheNav />
-
 	<main>
 		<slot />
 	</main>

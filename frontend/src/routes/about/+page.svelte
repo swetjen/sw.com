@@ -3,4 +3,4 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<p>todo</p>
+<p class="">todo</p>
