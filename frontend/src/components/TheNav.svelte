@@ -1,16 +1,15 @@
 <script lang="ts">
   import { fade, fly } from 'svelte/transition';
   import { page } from '$app/stores';
+  import {Contact} from '../stores/stores';
 
   // menu and contact states
   let ProductOpen: boolean = false
   let MainMenuOpen: boolean = false
-  let ContactModalOpen: boolean = false
 
   function Reset() {
     ProductOpen = false
     MainMenuOpen = false
-    ContactModalOpen = false
   }
 
 </script>
@@ -220,7 +219,7 @@
 <!--            </div>-->
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="leading-6 text-2xl hover:bg-blue-600 font-light text-white flex-4 bg-blue-800 rounded px-3 py-2 hidden md:inline-block">Contact<span aria-hidden="true"></span></a>
+            <button on:click={Contact.toggle} class="leading-6 text-2xl hover:bg-blue-600 font-light text-white flex-4 bg-blue-800 rounded px-3 py-2 hidden md:inline-block">Contact<span aria-hidden="true"></span></button>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
