@@ -29,11 +29,9 @@
 
 <section class="my-10">
 
-    <h2>Capabilities</h2>
+    <h2 class="my-2">Preferred Roles</h2>
 
-    <div class="w-100 my-2 bg-gray-100 dark:bg-gray-600 h-0.5"></div>
-
-    <div class="grid grid-cols-12 gap-2">
+    <div class="grid grid-cols-12 gap-2 border-t-2 border-gray-100">
 
         <div class="md:col-span-3 col-span-6 rounded-lg dark:bg-white p-2 dark:text-black">
             <div class="flex  h-full flex-row items-center justify-center space-x-3">
@@ -182,11 +180,8 @@
 </section>
 
 <section class="my-10">
-    <div class="my-10">
-        <h2>Featured work</h2>
-        <div class="w-100 my-2 bg-gray-100 dark:bg-gray-600 h-0.5"></div>
-        <div class="flex flex-auto sm:flex-wrap md:flex-row">
-        </div>
+    <div class="my-10 border-b-2 border-gray-100">
+        <h2 class="my-2">Featured work</h2>
     </div>
 
     {#each projects as p (p.title)}

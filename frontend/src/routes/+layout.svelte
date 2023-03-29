@@ -3,7 +3,7 @@
 	import './app.css';
 </script>
 
-<div class="app mx-4 md:mx-8">
+<div class="max-w-5xl mx-auto px-4 md:px-8">
 	<TheNav />
 
 	<main>

@@ -30,10 +30,10 @@
 <!--    </nav>-->
 <!--</header>-->
 
-<header class="bg-white">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+<header class="bg-white my-5">
+    <nav class="mx-auto flex max-w-5xl items-center justify-start py-6" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a href="/" class="-m-1.5 p-1.5 text-4xl font-bold">
+            <a href="/" class="text-4xl font-bold">
                 Spence Wetjen
             </a>
         </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
             <div class="relative">
-                <button on:click={() => ProductOpen = !ProductOpen} type="button" class="flex items-center gap-x-1 leading-6 text-gray-900" aria-expanded="false">
+                <button on:click={() => ProductOpen = !ProductOpen} type="button" class:active={ProductOpen} class="flex items-center gap-x-1 nav-link" aria-expanded="false">
                     Products
                     <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -162,8 +162,8 @@
                 {/if}
             </div>
 
-            <a href="#" class="leading-6 text-gray-900">Features</a>
-            <a href="#" class="leading-6 text-gray-900">Marketplace</a>
+            <a href="/about" class="leading-6 nav-link">About</a>
+<!--            <a href="#" class="leading-6 nav-link">Marketplace</a>-->
 
 <!--            <div class="relative">-->
 <!--                <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">-->
@@ -219,7 +219,7 @@
 <!--            </div>-->
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="leading-6 text-gray-900">Contact me<span aria-hidden="true"></span></a>
+            <a href="#" class="leading-6 text-2xl hover:bg-blue-600 font-light text-white flex-4 bg-blue-800 rounded px-3 py-2 hidden md:inline-block">Contact<span aria-hidden="true"></span></a>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
