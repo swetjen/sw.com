@@ -26,7 +26,7 @@ let projectsDefault: IProjectItem[] = [
     brand: 'Best Buy',
     summary: 'How do we bring order and efficiency to a dozens of one-off customer and employee applications?',
     hero_image: '/bg/digitaltools.webp',
-    slug: '/projects/digital-tools',
+    slug: '/projects/bestbuy-digital-tools',
   },
   {
     logo: '/logos/bby.svg',
@@ -34,7 +34,7 @@ let projectsDefault: IProjectItem[] = [
     brand: 'Best Buy',
     summary: 'Building tools to help prospective laptop buyers compare product features.',
     hero_image: '/bg/bbi.webp',
-    slug: '/projects/best-buy-interactive',
+    slug: '/projects/bestbuy-store-demo',
   },
   {
     logo: '/logos/ea.svg',
@@ -42,7 +42,7 @@ let projectsDefault: IProjectItem[] = [
     brand: 'Best Buy',
     summary: 'What if we build a browsable catalog of coming soon games?',
     hero_image: '/bg/pots.webp',
-    slug: '/projects/gaming-kiosk',
+    slug: '/projects/ea-gaming-kiosk',
   },
 ]
 
