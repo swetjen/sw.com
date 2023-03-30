@@ -179,7 +179,7 @@
     </div>
 </section>
 
-<section class="my-10">
+<section class="my-10" id="projects">
     <div class="my-10 border-b-2 border-gray-100">
         <h2 class="my-2">Featured work</h2>
     </div>
