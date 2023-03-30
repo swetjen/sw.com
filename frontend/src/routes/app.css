@@ -25,27 +25,36 @@
     }
 }
 
+body {
+    @apply text-lg/7 font-light
+}
+
 h1 {
     @apply text-3xl md:text-4xl font-bold
 }
-
 
 h1.card:hover {
     @apply no-underline
 }
 
+h2 {
+    @apply text-xl md:text-2xl font-normal
+}
+
+
 .nav-link {
-    @apply text-2xl font-light
+    @apply text-2xl font-light border-b-2 border-white leading-6
 }
 
 .nav-link:hover {
     @apply underline text-blue-800 border-blue-800 no-underline border-b-2 dark:hover:border-blue-800
 }
 
-.nav-link.active-link {
+.nav-link.active {
     @apply text-blue-800 border-b-2 dark:border-gray-600
 }
 
-h2 {
-    @apply text-xl md:text-2xl
+.hero-link {
+    @apply border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700
 }
+

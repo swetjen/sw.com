@@ -1,11 +1,14 @@
 <script>
 	import TheNav from '../components/TheNav.svelte';
+	import ContactModal from '../components/ContactModal.svelte';
 	import './app.css';
 </script>
 
-<div class="app mx-4 md:mx-8">
+<div class="">
 	<TheNav />
-	<main>
+	<ContactModal />
+
+	<main class="mx-auto max-w-5xl px-4 lg:px-8">
 		<slot />
 	</main>
 

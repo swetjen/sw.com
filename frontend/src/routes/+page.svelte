@@ -2,12 +2,6 @@
   import type {IProjectItem} from '../interfaces/iprojects';
   import {Projects} from '../stores/projects';
 
-  let projects: IProjectItem[]
-
-  Projects.subscribe(value => {
-    projects = value
-  })
-
 </script>
 
 <svelte:head>
@@ -17,23 +11,16 @@
 
 <section class="my-10">
     <h1 class="leading-snug text-4xl font-light tracking-tight md:my-32 my-16 md:w-2/3 sm:w-full">
-        Full Stack Developer with a background in UX. Previously lead development for <a
-            class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700"
-            href="https://tethr.com"
-            target="_blank">Tethr</a>, <a href="https://bestbuy.com" target="_blank"
-                                          class="border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700">Best
-        Buy</a>, and others.
+        Full Stack Developer with a background in UX. Previously lead development for <a class="hero-link" href="https://thebindel.com" target="_blank">Bindel</a>, <a class="hero-link" href="https://tethr.com" target="_blank">Tethr</a>, <a href="https://bestbuy.com" target="_blank" class="hero-link">Best Buy</a>, and others.
     </h1>
 </section>
 
 <!-- Common Projects -->
 <section class="my-10">
 
-    <h2>Capabilities</h2>
+    <h2 class="my-2">Preferred Roles</h2>
 
-    <div class="w-100 my-2 bg-gray-100 dark:bg-gray-600 h-0.5"></div>
-
-    <div class="grid grid-cols-12 gap-2">
+    <div class="grid grid-cols-12 gap-2 border-t-2 border-gray-100">
 
         <div class="md:col-span-3 col-span-6 rounded-lg dark:bg-white p-2 dark:text-black">
             <div class="flex  h-full flex-row items-center justify-center space-x-3">
@@ -143,7 +130,7 @@
                     <path d="M103.165 59.3088c.955 0 1.73-.8559 1.73-1.9117 0-1.0559-.775-1.9118-1.73-1.9118s-1.729.8559-1.729 1.9118c0 1.0558.774 1.9117 1.729 1.9117z" stroke="#000" stroke-width="1.5"/>
                 </svg>
                 <div class="w-2/3 inline-block leading-5 ">
-                    Product<br>Prototyping
+                    Rapid<br>Prototyping
                 </div>
             </div>
         </div>
@@ -174,22 +161,19 @@
                     <path d="m25.61 40.146c4.2683-5.1179 6.4024-9.288 6.4024-12.51s-1.207-7.3924-3.6211-12.51m-2.028 3.1276 1.883-4.3004 4.1428 1.9547m-18.874 8.1428-2.9177 3.0409m5.9306-6.1685-2.9177 3.0409m0.2599 0.0812 2.9294 3.053m-5.9423-6.1806 2.9294 3.053m29.857 6.3353-2.9176 3.0408m5.9306-6.1684-2.9177 3.0408m0.2599 0.0812 2.9294 3.053m-5.9423-6.1806 2.9294 3.0531m-6.2974 20.409-2.9177 3.0408m5.9306-6.1684-2.9177 3.0408m0.2599 0.0812 2.9294 3.0531m-5.9423-6.1806 2.9294 3.053" stroke="#000" stroke-linecap="square" stroke-width="2"/>
                 </svg>
                 <div class="w-2/3 inline-block leading-5 ">
-                    User Experience Design
+                    User Experience Strategy
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="my-10">
-    <div class="my-10">
-        <h2>Featured work</h2>
-        <div class="w-100 my-2 bg-gray-100 dark:bg-gray-600 h-0.5"></div>
-        <div class="flex flex-auto sm:flex-wrap md:flex-row">
-        </div>
+<section class="my-10" id="projects">
+    <div class="my-10 border-b-2 border-gray-100">
+        <h2 class="my-2">Featured work</h2>
     </div>
 
-    {#each projects as p (p.title)}
+    {#each $Projects as p (p.title)}
         <a class="my-10" href={p.slug}>
             <div class="md:h-96 h-64 bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl "
                  style={`background-image: url('${p.hero_image}')`}>
