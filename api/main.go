@@ -7,6 +7,8 @@ import (
 	"text/template"
 )
 
+// https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/
+
 var (
 	//go:embed resources
 	res   embed.FS
@@ -47,12 +49,14 @@ func run() error {
 			return
 		}
 
-		http.FileServer(http.FS(res))
-
-		log.Println("Server started...")
-		err = http.ListenAndServe(":8080", nil)
-		if err != nil {
-			panic(err)
-		}
 	})
+	http.FileServer(http.FS(res))
+
+	log.Println("Server started...")
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
