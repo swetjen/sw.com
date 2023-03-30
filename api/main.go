@@ -10,10 +10,10 @@ import (
 // https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/
 
 var (
-	//go:embed resources
+	//go:embed build
 	res   embed.FS
 	pages = map[string]string{
-		"/": "resources/index.gohtml",
+		"/": "build/index.html",
 	}
 )
 
