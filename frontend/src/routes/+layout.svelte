@@ -4,11 +4,11 @@
 	import './app.css';
 </script>
 
-<div class="max-w-5xl mx-auto px-4 md:px-8">
+<div class="">
 	<TheNav />
 	<ContactModal />
 
-	<main>
+	<main class="mx-auto max-w-5xl px-4 lg:px-8">
 		<slot />
 	</main>
 
