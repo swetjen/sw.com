@@ -25,17 +25,25 @@
     }
 }
 
+body {
+    @apply text-lg/7 font-light
+}
+
 h1 {
     @apply text-3xl md:text-4xl font-bold
 }
-
 
 h1.card:hover {
     @apply no-underline
 }
 
+h2 {
+    @apply text-xl md:text-2xl font-normal
+}
+
+
 .nav-link {
-    @apply text-2xl font-light
+    @apply text-2xl font-light leading-6
 }
 
 .nav-link:hover {
@@ -46,6 +54,7 @@ h1.card:hover {
     @apply text-blue-800 border-b-2 dark:border-gray-600
 }
 
-h2 {
-    @apply text-xl md:text-2xl
+.hero-link {
+    @apply border-b-2 border-gray-100 dark:border-gray-600 hover:text-blue-700 hover:border-blue-700
 }
+

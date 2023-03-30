@@ -6,8 +6,10 @@
   let project: IProjectItem = {
     logo: '/logos/bindel.svg',
     brand: 'The Bindel',
-    title: 'Vacation Rentals',
-    summary: 'What if you had a flexible housing provider that made it easy to live and work anywhere?',
+    title: 'Reservations Platform',
+    titleExtended: 'An online booking platform that let guests browse, book and pay',
+    subtitle: '',
+    summary: 'An online booking platform that let guests browse, book and pay.',
     hero_image: '/bg/bindel-bg.jpg',
     slug: '/projects/bindel'
   }
@@ -20,19 +22,21 @@
 </svelte:head>
 
 <section class="my-10">
-    <TheBread/>
+<!--    <TheBread/>-->
     <ProjectHero project={project}/>
 </section>
 
-<section class="my-10 space-y-8">
+<section class="my-10 max-w-2xl mx-auto">
+    <div class="mx-5 space-y-8">
     <p>
         "As the lead developer for The Bindel's online booking platform, I had the privilege of contributing to the
         success of an Austin, Texas-based startup that provides flexible housing solutions for remote workers. My work
         on the project involved writing both the backend and frontend applications, which included restful APIs, a
         database, and an ERP system.
     </p>
+    <h2>Making it fun</h2>
     <p>
-        Using the latest technologies such as Python with FastApi for Restful Services, NuxtJS for fast SSG (Server Side
+    Using the latest technologies including Python with FastApi for Restful Services, NuxtJS for fast SSG (Server Side
         Generated Pages), and MongoDB for the database, I created a scalable, reliable platform that could handle the
         company's growing customer base. Additionally, I built a frontend interface that enabled customers to see
         apartment availability and book their stay, while also providing an administrative interface for managing
@@ -44,6 +48,7 @@
         housing solutions for remote workers, we were able to contribute to the company's success and help it grow into
         a leading player in the industry."
     </p>
+    </div>
 </section>
 
 <section>
