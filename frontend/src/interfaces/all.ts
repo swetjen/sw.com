@@ -2,6 +2,7 @@ export interface IProjectItem {
   logo: string
   brand: string
   heroImage: string
+  dates: string
   title: string
   titleExtended?: string
   slug: string
