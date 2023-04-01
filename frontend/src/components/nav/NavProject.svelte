@@ -1,5 +1,15 @@
 <script lang="ts">
   import type {IProjectItem} from '../../interfaces/all';
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher()
+
+  function sendCloseMsg() {
+    console.log('send called')
+    dispatch('message', {
+      text: 'click'
+    })
+  }
 
   export let props: IProjectItem
 
@@ -11,7 +21,7 @@
             <img class="inline-block mx-auto opacity-90" width="48" src={props.logo}>
         </div>
     </div>
-    <a href={props.slug} class="block text-gray-900">
+    <a on:click={sendCloseMsg} href={props.slug} class="block text-gray-900">
         {props.title}
         <span class="absolute inset-0"></span>
     </a>

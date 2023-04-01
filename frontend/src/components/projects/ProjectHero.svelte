@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {IProjectItem} from '../../interfaces/iprojects';
+  import type {IProjectItem} from '../../interfaces/all';
   export let project: IProjectItem
 </script>
 
