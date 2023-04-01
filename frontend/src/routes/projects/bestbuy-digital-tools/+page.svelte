@@ -16,7 +16,6 @@
 </svelte:head>
 
 <section class="my-10">
-    <TheBread/>
     <ProjectHero project={thisProject}/>
 </section>
 

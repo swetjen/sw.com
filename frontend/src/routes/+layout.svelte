@@ -13,7 +13,7 @@
 	</main>
 
 	<footer>
-		<p class="mt-40 text-center font-bold">footer todo</p>
+		<p class="mt-40 text-center font-bold"></p>
 	</footer>
 </div>
 
