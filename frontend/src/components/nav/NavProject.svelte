@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type {IProjectItem} from '../interfaces/iprojects';
+  import type {IProjectItem} from '../../interfaces/all';
 
   export let props: IProjectItem
 
 </script>
 
 <div class="group relative rounded-lg text-sm leading-6 wiggle">
-    <div class="h-24 bg-center bg-cover rounded-lg group-hover:bg-white" style={`background-image: url('${props.hero_image}')`}>
+    <div class="h-24 bg-center bg-cover rounded-lg group-hover:bg-white" style={`background-image: url('${props.heroImage}')`}>
         <div class="flex flex-col h-full justify-center items-center bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl ">
             <img class="inline-block mx-auto opacity-90" width="48" src={props.logo}>
         </div>

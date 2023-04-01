@@ -1,5 +1,5 @@
 <script>
-	import TheNav from '../components/TheNav.svelte';
+	import TheNav from '../components/nav/TheNav.svelte';
 	import ContactModal from '../components/ContactModal.svelte';
 	import './app.css';
 </script>

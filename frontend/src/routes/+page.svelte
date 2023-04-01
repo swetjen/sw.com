@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {IProjectItem} from '../interfaces/iprojects';
+  import type {IProjectItem} from '../interfaces/all';
   import {Projects} from '../stores/projects';
 
 </script>
@@ -176,7 +176,7 @@
     {#each $Projects as p (p.title)}
         <a class="my-10" href={p.slug}>
             <div class="md:h-96 h-64 bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl "
-                 style={`background-image: url('${p.hero_image}')`}>
+                 style={`background-image: url('${p.heroImage}')`}>
                 <div class="w-full h-full flex flex-row text-center">&nbsp;
                     <img class="inline-block mx-auto opacity-90" width="125" src={p.logo}>
                 </div>
@@ -187,7 +187,7 @@
                     <h1 class="mb-3 text-3xl font-bold md:mx-auto">{p.title}</h1>
                 </div>
                 <span class="flex-2 no-underline sm:w-full md:w-1/2 md:mx-auto ">
-                    {p.summary}
+                    todo
                 </span>
             </div>
         </a>

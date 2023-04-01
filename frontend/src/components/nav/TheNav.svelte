@@ -1,9 +1,9 @@
 <script lang="ts">
   import { fade, fly } from 'svelte/transition';
   import { page } from '$app/stores';
-  import {Contact} from '../stores/stores';
-  import type {IProjectItem} from '../interfaces/iprojects';
-  import { Projects } from '../stores/projects';
+  import {Contact} from '../../stores/stores';
+  import type {IProjectItem} from '../../interfaces/all';
+  import { Projects } from '../../stores/projects';
   import NavProject from './NavProject.svelte';
 
   // menu and contact states

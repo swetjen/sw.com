@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-// ContactModal wraps the Contact form
+// ContactModal wraps the ContactModal state
 function ContactModal() {
   const { subscribe, set, update } = writable(false);
 

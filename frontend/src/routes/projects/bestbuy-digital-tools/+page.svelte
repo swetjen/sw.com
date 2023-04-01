@@ -1,16 +1,12 @@
 <script lang="ts">
-  import type {IProjectItem} from '../../../interfaces/iprojects';
+  import type {IProjectItem} from '../../../interfaces/all';
   import ProjectHero from '../../../components/projects/ProjectHero.svelte';
   import TheBread from '../../../components/TheBread.svelte';
 
-  let project: IProjectItem = {
-    logo: '/logos/bindel.svg',
-    brand: 'The Bindel',
-    title: 'Vacation Rentals',
-    summary: 'What if you had a flexible housing provider that made it easy to live and work anywhere?',
-    hero_image: '/bg/bindel-bg.jpg',
-    slug: '/projects/bindel'
-  }
+  import {Projects} from '../../../stores/projects';
+  import {page} from '$app/stores';
+  const tokens = $page.url.pathname.split('/');
+  const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length -1]))
 
 </script>
 
@@ -21,7 +17,7 @@
 
 <section class="my-10">
     <TheBread/>
-    <ProjectHero project={project}/>
+    <ProjectHero project={thisProject}/>
 </section>
 
 <section class="my-10 space-y-8">

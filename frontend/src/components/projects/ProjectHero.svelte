@@ -20,7 +20,7 @@
 
 <section class="my-10">
     <div class="md:h-96 -z-50 h-64 bg-center bg-cover rounded-2xl shadow-2xl"
-         style={`background-image: url('${project.hero_image}')`}>
+         style={`background-image: url('${project.heroImage}')`}>
 <!--        <div class="w-full h-full flex flex-row text-center">&nbsp;-->
 <!--            <img class="inline-block mx-auto" width="125" src={project.logo}>-->
 <!--        </div>-->
