@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {IContactForm} from '../interfaces/iprojects';
+  import type {IContactForm} from '../interfaces/all';
   import {Contact} from '../stores/stores';
 
   let is_valid
@@ -20,7 +20,7 @@
 <div>
     <div class="fixed z-10 inset-0 overflow-y-auto">
             <div
-                    class="flex  md:items-end justify-center  pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                class="flex  md:items-end justify-center  pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 
                 <!--
               Background overlay, show/hide based on modal state.
@@ -34,7 +34,7 @@
             -->
                 <div class="fixed inset-0 transition-opacity" aria-hidden="true">
                     <div
-                            on:click={$Contact.toggle}
+                            on:click={Contact.reset}
                             class="absolute inset-0 bg-gray-900 opacity-75"></div>
                 </div>
 
@@ -90,7 +90,7 @@
                                         </div>
                                         <div>
                                             <label for="message" class="sr-only">Email address</label>
-                                            <textarea disabled="{is_submitting}"
+                                            <textarea disabled={is_submitting}
                                                       id="message" name="message" value={message} type="text" required
                                                       placeholder="Message"
                                                       rows="8"
@@ -105,7 +105,7 @@
                     <div class="bg-gray-100 py-3 md:px-10 px-6 sm:flex justify-end flex-row ">
 
                         <button type="button"
-                                on:click={() => $Contact.reset}
+                                on:click={() => Contact.reset}
                                 class="mt-3 inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                             Cancel
                         </button>
