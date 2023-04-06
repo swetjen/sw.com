@@ -5,10 +5,9 @@
 
   import {Projects} from '../../../stores/projects';
   import {page} from '$app/stores';
+  import Caption from '../../../components/Caption.svelte';
   const tokens = $page.url.pathname.split('/');
   const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length -1]))
-
-
 </script>
 
 <svelte:head>
@@ -28,6 +27,11 @@
         on the project involved writing both the backend and frontend applications, which included restful APIs, a
         database, and an ERP system.
     </p>
+        <div class="flex space-x-2 flex-row">
+        <video width="300" height="300" autoplay loop>
+            <source src="/videos/BindelLocationPicker.mp4" type="video/mp4">
+        </video>
+        </div>
     <h2>Making it fun</h2>
     <p>
     Using the latest technologies including Python with FastApi for Restful Services, NuxtJS for fast SSG (Server Side
@@ -43,9 +47,34 @@
         a leading player in the industry."
     </p>
     </div>
+    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-6 w-full">
+        <div>
+            <img src="/bindel/pdp.svg"/>
+        </div>
+        <div>
+            <img src="/bindel/pdp-upgrade-selected.svg"/>
+        </div>
+    </div>
 </section>
 
 <section>
+    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-2 w-full">
+        <div>
+            <img src="/bindel/nav-loc-picker.svg"/>
+        </div>
+        <div>
+            <img src="/bindel/nav-unit-picker.svg"/>
+        </div>
+    </div>
+    <div>
+        <Caption props="The Bindel — Wireframes illustrating the location and unit-type pickers in their open and intentionally hap-hazard appearance."/>
+    </div>
+
+</section>
+
+<section>
+    Notion of making it simple, fun.
+    Happy path is great; but upgrades make it amazing.
     ☐ Better hero image
     ☐ Screenshots
     ☐ Embed the fun menu

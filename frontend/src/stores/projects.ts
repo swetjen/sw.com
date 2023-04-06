@@ -36,7 +36,7 @@ let projectsDefault: IProjectItem[] = [
     logo: '/logos/bby.svg',
     title: 'Store Demos',
     brand: 'Best Buy',
-    titleExtended: 'Instore demo for laptop purchasers',
+    titleExtended: 'Instore demo for laptop shoppers',
     heroImage: '/bg/bbi.webp',
     dates: '2008 - 2009',
     slug: '/projects/bestbuy-store-demo',

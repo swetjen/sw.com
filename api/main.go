@@ -2,10 +2,17 @@ package main
 
 import (
 	"embed"
+	"errors"
+	"flag"
+	"fmt"
+	"github.com/go-chi/chi/v5"
+	"github.com/sw.com/api/db"
+	"go.mongodb.org/mongo-driver/mongo"
 	"io/fs"
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 )
 
@@ -14,17 +21,71 @@ import (
 //go:embed all:build/*
 var build embed.FS
 
-func main() {
+// Version is set during build.
+var Version = "dev"
+
+type Server struct {
+	config *Config
+	db     *mongo.Database
+	router *chi.Mux
+}
+
+func run(args []string) error {
+	flags := flag.NewFlagSet(args[0], flag.ContinueOnError)
+	flags.Usage = func() {
+		fmt.Println(args[0] + " " + Version + ` usage: api [flags] [arguments]`)
+		fmt.Println(`flags:`)
+		flags.PrintDefaults()
+	}
+
+	var configFile = flags.String("config", "", "yaml configuration file to start the server with")
+	if err := flags.Parse(args[1:]); err != nil {
+		return err
+	}
+	if *configFile == "" {
+		flags.PrintDefaults()
+		return errors.New("missing config.yaml")
+	}
+
+	file, err := os.ReadFile(*configFile)
+	if err != nil {
+		return err
+	}
+
+	config, err := NewConfig(file)
+	if err != nil {
+		return err
+	}
+
+	database := db.GetDatabase(config.DbUri, config.DbName)
+
+	s := &Server{
+		config: config,
+		db:     database,
+		router: chi.NewRouter(),
+	}
+
+	////
+	s.setupRouter()
+
 	contentRoot, _ := fs.Sub(build, "build")
 	fs := http.FileServer(http.FS(contentRoot))
-	//fs := http.FileServer(http.Dir("./build"))
-	//fs := http.FileServer(http.FS(build))
-	http.Handle("/", Adapter("/", fs))
+	s.router.Handle("/", Adapter("/", fs))
 
 	log.Print("Listening on :3000...")
-	err := http.ListenAndServe(":3000", nil)
+	err = http.ListenAndServe(":3000", s.router)
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	return nil
+
+}
+
+func main() {
+	if err := run(os.Args); err != nil {
+		fmt.Printf("%s\n", err)
+		os.Exit(1)
 	}
 }
 
