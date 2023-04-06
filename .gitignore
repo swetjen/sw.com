@@ -1,4 +1,6 @@
 .idea
 /api/build/
 /api/tmp/
-dev.yaml
+/api/dev.yaml
+/api/api
+/api/.idea
