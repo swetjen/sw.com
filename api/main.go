@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"embed"
 	"errors"
 	"flag"
@@ -14,6 +15,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
 )
 
 // https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/
@@ -65,6 +67,8 @@ func run(args []string) error {
 		router: chi.NewRouter(),
 	}
 
+	s.TestsDb()
+
 	////
 	s.setupRouter()
 
@@ -115,4 +119,28 @@ func Adapter(prefix string, h http.Handler) http.Handler {
 			http.NotFound(w, r)
 		}
 	})
+}
+
+func (s *Server) TestsDb() {
+
+	type testdoc struct {
+		Label     string
+		TSCreated int64
+	}
+
+	col := s.db.Collection("test")
+
+	docsTodo := make([]interface{}, 1)
+	docsTodo[0] = testdoc{
+		Label:     "Startup Test",
+		TSCreated: time.Now().Unix(),
+	}
+
+	_, err := col.InsertMany(context.TODO(), docsTodo)
+	if err != nil {
+		panic(err)
+	}
+
+	return
+
 }

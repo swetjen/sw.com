@@ -11,4 +11,23 @@ function ContactModal() {
   };
 }
 
-export const Contact = ContactModal();
+const Contact = ContactModal();
+
+
+// Contact Id Response
+let ContactId = writable('')
+
+if (typeof localStorage !== 'undefined') {
+  // Get the value out of storage on load.
+  const stored = localStorage.id
+// or localStorage.getItem('content')
+
+// Set the stored value or a sane default.
+  ContactId = writable(stored || '')
+
+// Anytime the store changes, update the local storage value.
+  ContactId.subscribe((value) => localStorage.id = value)
+// or localStorage.setItem('content', value)
+}
+
+export {ContactId, Contact}

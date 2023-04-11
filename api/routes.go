@@ -1,12 +1,13 @@
 package main
 
 import (
-	"compress/gzip"
 	"encoding/json"
 	"fmt"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
+	"github.com/google/uuid"
 	"github.com/pkg/errors"
+	"github.com/sw.com/api/db"
 	"io"
 	"net/http"
 	"strings"
@@ -56,12 +57,12 @@ func Encode(w http.ResponseWriter, r *http.Request, status int, v interface{}) e
 		return errors.Wrap(err, "encode json")
 	}
 	var out io.Writer = w
-	if strings.Contains(r.Header.Get("Accept-Encoding"), "gzip") {
-		w.Header().Set("Content-Encoding", "gzip")
-		gzw := gzip.NewWriter(w)
-		out = gzw
-		defer gzw.Close()
-	}
+	//if strings.Contains(r.Header.Get("Accept-Encoding"), "gzip") {
+	//	w.Header().Set("Content-Encoding", "gzip")
+	//	gzw := gzip.NewWriter(w)
+	//	out = gzw
+	//	defer gzw.Close()
+	//}
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(status)
 	if _, err := out.Write(b); err != nil {
@@ -72,19 +73,37 @@ func Encode(w http.ResponseWriter, r *http.Request, status int, v interface{}) e
 
 func (s *Server) handleContactForm(w http.ResponseWriter, r *http.Request) {
 	type ContactFormRequest struct {
-		Name    string
-		Email   string
-		Message string
+		Name    string `json:"name,required"`
+		Email   string `json:"email"`
+		Message string `json:"message"`
+		Guid    string `bson:"guid"`
+	}
+
+	type ContactFormResponse struct {
+		Status string `json:"status"`
+		Guid   string `json:"guid" bson:"guid"`
 	}
 
 	var form ContactFormRequest
 
 	if err := json.NewDecoder(r.Body).Decode(&form); err != nil {
-		respondErr(w, r, http.StatusUnprocessableEntity, "Invalid request body.")
+		respondErr(w, r, http.StatusUnprocessableEntity, "Unprocessable request body.")
 	}
 
-	// do stuff with the contact form
+	form.Guid = strings.Replace(uuid.New().String(), "-", "", -1)
 
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf("👍")))
+	fmt.Printf("%v\n", form)
+
+	col := s.db.Collection(db.Contacts)
+	_, err := col.InsertOne(r.Context(), form)
+
+	if err != nil {
+		respondErr(w, r, http.StatusUnprocessableEntity, "Unable to insert document")
+	}
+
+	respond(w, r, http.StatusOK, ContactFormResponse{
+		Status: "Okay",
+		Guid:   form.Guid,
+	})
+
 }

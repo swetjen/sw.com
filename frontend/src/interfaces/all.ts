@@ -9,11 +9,12 @@ export interface IProjectItem {
 }
 
 export interface IContactForm {
+  name: string
   message: string
   email: string
 }
 
-export interface INotification {
-  msg: string,
-  class?: string
+export interface IContactFormResponse {
+  status: string
+  guid: string
 }

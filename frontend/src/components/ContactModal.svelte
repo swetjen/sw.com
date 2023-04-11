@@ -1,17 +1,51 @@
 <script lang="ts">
-  import type {IContactForm} from '../interfaces/all';
-  import {Contact} from '../stores/stores';
+  import type {IContactForm, IContactFormResponse} from '../interfaces/all';
+  import {Contact, ContactId} from '../stores/stores';
+  import { toast } from '@zerodevx/svelte-toast';
 
-  let is_valid
-  let is_submitting
+  // state
+  let is_valid = true
+  let is_submitting = false
 
   //form
+  let name = ''
   let message = ''
   let email = ''
 
-  function submit() {
-    // todo
+  let result = null
+
+  async function SubmitContactForm() {
+    is_submitting = true
+    const req: IContactForm = {
+      name,
+      email,
+      message
+    }
+    const res = await fetch('http://localhost:3000/api/v1/contact', {
+      method: 'POST',
+      body: JSON.stringify(req
+      )
+    })
+    if (res.status === 200) {
+      const data = await res.json() as IContactFormResponse
+
+      $ContactId = data.guid
+
+      result = data.status
+      toast.push("Success", {
+        duration: 3500,
+        theme: {
+          '--toastColor': 'mintcream',
+          '--toastBackground': 'rgba(72,187,120,0.9)',
+          '--toastBarBackground': '#2F855A'
+        }});
+      $: Contact.toggle()
+    }
+    is_submitting = false
+    // Handle errors
   }
+
+
 
 </script>
 
@@ -66,7 +100,7 @@
                             <!--            </div>-->
                             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                 <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                    Contact Spence
+                                    Contact {email}
                                 </h3>
                                 <div class="mt-2">
                                     <p class="text-sm text-gray-500">
@@ -82,16 +116,16 @@
                                     <div class="rounded-md shadow-sm -space-y-px">
                                         <div>
                                             <label for="email-address" class="sr-only">Email address</label>
-                                            <input id="email-address" value={email} name="email" type="email" autocomplete="email" required
+                                            <input id="email-address" bind:value={email} name="email" type="email" autocomplete="email" required
                                                    placeholder="Email address"
-                                                   disabled="{is_submitting}"
+                                                   disabled={is_submitting}
                                                    class="w-full appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             >
                                         </div>
                                         <div>
                                             <label for="message" class="sr-only">Email address</label>
                                             <textarea disabled={is_submitting}
-                                                      id="message" name="message" value={message} type="text" required
+                                                      id="message" name="message" bind:value={message} type="text" required
                                                       placeholder="Message"
                                                       rows="8"
                                                       class="w-full appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -110,7 +144,7 @@
                             Cancel
                         </button>
 
-                        <button type="button" on:click={submit}
+                        <button type="button" on:click={() => SubmitContactForm(email, message)}
                                 class:bg-green-500={is_valid}
                                 class="w-24 bg-gray-300 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                             {#if !is_submitting}
@@ -126,7 +160,7 @@
                   </svg>
                 </div>
               </span>
-                                {/if}
+                            {/if}
                         </button>
                     </div>
                 </div>

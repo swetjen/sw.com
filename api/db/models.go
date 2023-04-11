@@ -1,11 +1,18 @@
 package db
 
-// ContactForm Describes a contact request
-type ContactForm struct {
-	Name      string
-	Email     string
-	Phone     string
-	Message   string
-	IP        string
-	TSCreated int64
-}
+// collection names
+
+const (
+	Contacts = "contacts"
+)
+
+type (
+	// ContactForm Describes a contact request
+	ContactForm struct {
+		Name      string
+		Email     string
+		Message   string
+		IP        string
+		TSCreated int64
+	}
+)

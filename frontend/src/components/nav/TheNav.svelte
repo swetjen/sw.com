@@ -53,7 +53,7 @@
 <header class="relative isolate z-10 bg-white">
     <nav class="mx-auto flex max-w-5xl items-center justify-between pt-6 px-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a href="/" class="-m-1.5 p-1.5">
+            <a href="/" class="-m-1.5 p-1.5" on:click={Reset}>
                 <h1 aria-description="Spence Wetjen">Spence Wetjen</h1>
             </a>
         </div>
@@ -96,7 +96,7 @@
                 {/if}
             </div>
 
-            <a href="/about" class:active={$page.url.pathname === "/about"} class="leading-6 nav-link">About</a>
+            <a href="/about" on:click={Reset} class:active={$page.url.pathname === "/about"} class="leading-6 nav-link">About</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <button on:click={Contact.toggle} class="leading-6 text-2xl hover:bg-blue-600 font-light text-white flex-4 bg-blue-800 rounded px-3 py-2 hidden md:inline-block">Contact &rarr;<span aria-hidden="true"></span></button>
