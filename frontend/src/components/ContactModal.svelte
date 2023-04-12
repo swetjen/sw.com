@@ -2,6 +2,7 @@
   import type {IContactForm, IContactFormResponse} from '../interfaces/all';
   import {Contact, ContactId} from '../stores/stores';
   import { toast } from '@zerodevx/svelte-toast';
+  import { fly, fade } from 'svelte/transition';
 
   // state
   let is_valid = true
@@ -66,7 +67,7 @@
                 From: "opacity-100"
                 To: "opacity-0"
             -->
-                <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div in:fade="{{ duration: 300}}" out:fade="{{duration: 200}}" class="fixed inset-0 transition-opacity" aria-hidden="true">
                     <div
                             on:click={Contact.reset}
                             class="absolute inset-0 bg-gray-900 opacity-75"></div>
@@ -84,7 +85,7 @@
                     From: "opacity-100 translate-y-0 sm:scale-100"
                     To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 -->
-                <div
+                <div in:fly="{{ duration: 300, y: 18}}" out:fly="{{duration:200, y:18}}"
                         class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
                         role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -139,7 +140,7 @@
                     <div class="bg-gray-100 py-3 md:px-10 px-6 sm:flex justify-end flex-row ">
 
                         <button type="button"
-                                on:click={() => Contact.reset}
+                                on:click={Contact.reset}
                                 class="mt-3 inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                             Cancel
                         </button>

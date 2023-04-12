@@ -13,7 +13,6 @@ function ContactModal() {
 
 const Contact = ContactModal();
 
-
 // Contact Id Response
 let ContactId = writable('')
 
