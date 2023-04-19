@@ -5,26 +5,49 @@
   import { fly, fade } from 'svelte/transition';
 
   // state
+  let errors: IContactForm = {
+    name: '',
+    message: '',
+    email: '',
+  }
+
+  function isValid(): boolean {
+    let valid = true
+    if (!form.email) {
+      valid = false
+      errors.email = "An email address is required"
+      return valid
+    }
+    errors.email = ""
+    if (form.message.length < 3) {
+      valid = false
+      errors.message = "Please include a message."
+      return valid
+    }
+    errors.message = ''
+    return valid
+  }
+
   let is_valid = true
   let is_submitting = false
 
   //form
-  let name = ''
-  let message = ''
-  let email = ''
+  let form: IContactForm = {
+    name: '',
+    message: '',
+    email: ''
+  }
 
   let result = null
 
   async function SubmitContactForm() {
-    is_submitting = true
-    const req: IContactForm = {
-      name,
-      email,
-      message
+    if (!isValid()) {
+      return
     }
+    is_submitting = true
     const res = await fetch('http://localhost:3000/api/v1/contact', {
       method: 'POST',
-      body: JSON.stringify(req
+      body: JSON.stringify(form
       )
     })
     if (res.status === 200) {
@@ -101,7 +124,7 @@
                             <!--            </div>-->
                             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                 <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                    Contact {email}
+                                    Contact Spence
                                 </h3>
                                 <div class="mt-2">
                                     <p class="text-sm text-gray-500">
@@ -114,24 +137,32 @@
                             <div class="px-4 pb-4">
                                 <!-- Contact Form -->
                                 <form class="mt-8 space-y-8">
-                                    <div class="rounded-md shadow-sm -space-y-px">
-                                        <div>
+                                    <div class="relative mt-2 rounded-md shadow-sm">
                                             <label for="email-address" class="sr-only">Email address</label>
-                                            <input id="email-address" bind:value={email} name="email" type="email" autocomplete="email" required
+                                            <input id="email-address" bind:value={form.email} name="email" type="email" autocomplete="email" required
                                                    placeholder="Email address"
                                                    disabled={is_submitting}
-                                                   class="w-full appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                            >
-                                        </div>
+                                                   class="{errors.email ? 'ring-red-300 placeholder:text-red-300 focus:ring-red-500 text-red-900' : 'text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600' } block w-full rounded-md border-0 py-1.5 pr-10 ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6">
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                                                <svg class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                        {#if errors.email}
+                                        <p class="mt-2 text-sm text-red-600" id="email-error">{errors.email}</p>
+                                        {/if}
                                         <div>
                                             <label for="message" class="sr-only">Email address</label>
                                             <textarea disabled={is_submitting}
-                                                      id="message" name="message" bind:value={message} type="text" required
+                                                      id="message" name="message" bind:value={form.message} type="text" required
                                                       placeholder="Message"
                                                       rows="8"
-                                                      class="w-full appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                                      class="{errors.message ? 'ring-red-300 placeholder:text-red-300 focus:ring-red-500 text-red-900' : 'text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600' }  w-full appearance-none rounded-none relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             ></textarea>
                                         </div>
+                                        {#if errors.message}
+                                            <p class="mt-2 text-sm text-red-600" id="message-error">{errors.message}</p>
+                                        {/if}
                                     </div>
                                 </form>
                             </div>
@@ -145,7 +176,7 @@
                             Cancel
                         </button>
 
-                        <button type="button" on:click={() => SubmitContactForm(email, message)}
+                        <button type="button" on:click={SubmitContactForm}
                                 class:bg-green-500={is_valid}
                                 class="w-24 bg-gray-300 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                             {#if !is_submitting}
