@@ -12,9 +12,13 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p class="mt-40 text-center font-bold"></p>
-		the footer
+	<footer class="mx-auto mb-10 flex max-w-5xl items-center justify-between pt-6 px-6 lg:px-8">
+		<p class="text-sm">
+			Spence Wetjen is a Full Stack Developer in Austin, Texas.
+		</p>
+		<p class="text-sm">
+			© 2023 Spence Wetjen
+		</p>
 	</footer>
 	<SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
 </div>
