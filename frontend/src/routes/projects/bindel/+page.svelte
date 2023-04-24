@@ -5,6 +5,7 @@
   import {Projects} from '../../../stores/projects';
   import {page} from '$app/stores';
   import Caption from '../../../components/Caption.svelte';
+  import Image from '../../../components/Image.svelte';
 
   const tokens = $page.url.pathname.split('/');
   const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length - 1]))
@@ -28,7 +29,7 @@
                 developer.
             </li>
             <li>
-                Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 within 12
+                Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 in 12
                 months.
             </li>
         </ul>
@@ -41,13 +42,13 @@
         <p>
             As a solo developer, I prioritize choosing technology that allows me to quickly ship new features for
             startup projects. My go-to stack for The Bindel included Python, FastAPI, and MongoDB for the backend,
-            and Nuxt.js + TypeScript for the frontend. The entire project was hosted on DigitalOcean and a simple
+            and NuxtJs + TypeScript for the frontend. The entire project was hosted on DigitalOcean and a simple
             Bash script was used for CI/CD.
         </p>
         <p>
-            For the frontend, I chose Nuxt.js due to its SSG capabilities and my experience with Vue.js. Nuxt.js
-            supports both SEO benefits of Server-Side-Generation (SSG) and a fast Single Page Application (SPA)
-            experience for users. TypeScript was also used for additional compile-time safety.
+            For the frontend, I chose NuxtJs due to its SSG capabilities and my previous experience with VueJs. Nuxt
+            supports both Server-Side-Generation (SSG) for SEO and a fast Single Page Application (SPA)
+            for users. TypeScript's compile-time safety helps get features working with less trial and error.
         </p>
         <p>
             For the backend, I opted for FastAPI and MongoDB. FastAPI's out-of-the-box OpenAPI support made it easy
@@ -57,23 +58,15 @@
         </p>
 
     </div>
-    <!--    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-6 w-full">-->
-    <!--        <div>-->
-    <!--            <img src="/bindel/pdp.svg"/>-->
-    <!--        </div>-->
-    <!--        <div>-->
-    <!--            <img src="/bindel/pdp-upgrade-selected.svg"/>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </section>
 
 <section>
-    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-2 w-full">
+    <div class="flex flex-row space-x-4 bg-gray-100 rounded p-4 my-2 w-full">
         <div>
-            <img src="/bindel/nav-loc-picker.svg"/>
+            <Image src="/bindel/nav-loc-picker.svg" alt="Wireframe of the Bindel Navigation Menu with Location picker open"/>
         </div>
         <div>
-            <img src="/bindel/nav-unit-picker.svg"/>
+            <Image src="/bindel/nav-unit-picker.svg" alt="Wireframe of the Bindel Navigation Menu with Unit-Type picker open"/>
         </div>
     </div>
     <div>
@@ -85,14 +78,11 @@
             <h2>Making it fun</h2>
             <p>
                 To make the frontend fun and engaging, despite competition from bigger players with millions in funding,
-                we
-                focused on keeping the Bindel site simple and enjoyable. One key area that received extra attention was
-                the
-                neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation menu
+                we focused on keeping the Bindel site simple and enjoyable. One key area that received extra attention was
+                the neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation menu
                 haphazardly unfolds into a stack of cards, each featuring a neighborhood with a cute icon to entice
                 interest. Similarly, the locations work the same way, with slightly bigger cards to distinguish between
-                the
-                unit's amenities.
+                the unit's amenities.
             </p>
         </div>
     </div>

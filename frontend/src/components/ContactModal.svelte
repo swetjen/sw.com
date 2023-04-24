@@ -69,8 +69,6 @@
     // Handle errors
   }
 
-
-
 </script>
 
 
