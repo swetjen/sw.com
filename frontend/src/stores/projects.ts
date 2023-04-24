@@ -8,8 +8,9 @@ let projectsDefault: IProjectItem[] = [
     logo: '/logos/bindel.svg',
     brand: 'The Bindel',
     heroImage: '/bg/bindel-bg.jpg',
-    title: 'Reservations Platform',
+    title: 'Custom Rental Reservations Platform',
     titleExtended: 'An online booking platform that let guests browse, book and pay',
+    subtitle: 'The Bindel is an online rental booking platform for short-term stays in Austin, Texas, offering a fun and simple user experience for guests.',
     dates: 'September 2020 - June 2022',
     slug: '/projects/bindel'
   },

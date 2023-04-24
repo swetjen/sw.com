@@ -5,6 +5,7 @@ export interface IProjectItem {
   dates: string
   title: string
   titleExtended?: string
+  subtitle?: string
   slug: string
 }
 

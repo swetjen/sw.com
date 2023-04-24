@@ -1,13 +1,13 @@
 <script lang="ts">
   import type {IProjectItem} from '../../../interfaces/all';
   import ProjectHero from '../../../components/projects/ProjectHero.svelte';
-  import TheBread from '../../../components/TheBread.svelte';
 
   import {Projects} from '../../../stores/projects';
   import {page} from '$app/stores';
   import Caption from '../../../components/Caption.svelte';
+
   const tokens = $page.url.pathname.split('/');
-  const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length -1]))
+  const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length - 1]))
 </script>
 
 <svelte:head>
@@ -21,40 +21,50 @@
 
 <section class="my-10 max-w-2xl mx-auto">
     <div class="mx-5 space-y-8">
-    <p>
-        "As the lead developer for The Bindel's online booking platform, I had the privilege of contributing to the
-        success of an Austin, Texas-based startup that provides flexible housing solutions for remote workers. My work
-        on the project involved writing both the backend and frontend applications, which included restful APIs, a
-        database, and an ERP system.
-    </p>
-        <div class="flex space-x-2 flex-row">
-        <video width="300" height="300" autoplay loop>
-            <source src="/videos/BindelLocationPicker.mp4" type="video/mp4">
-        </video>
-        </div>
-    <h2>Making it fun</h2>
-    <p>
-    Using the latest technologies including Python with FastApi for Restful Services, NuxtJS for fast SSG (Server Side
-        Generated Pages), and MongoDB for the database, I created a scalable, reliable platform that could handle the
-        company's growing customer base. Additionally, I built a frontend interface that enabled customers to see
-        apartment availability and book their stay, while also providing an administrative interface for managing
-        apartments, tracking availability, reviewing and approving guest reservations, sending invoices, and collecting
-        payments.
-    <p>
-        My work played a significant role in helping The Bindel get in front of customers quickly by iterating rapidly
-        and releasing new functionality daily. By building a user-friendly platform that offered seamless and convenient
-        housing solutions for remote workers, we were able to contribute to the company's success and help it grow into
-        a leading player in the industry."
-    </p>
+        <h2>At a glance</h2>
+        <ul class="list-disc">
+            <li>
+                Designed and implemented an online booking platform and reservation management system as the sole
+                developer.
+            </li>
+            <li>
+                Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 within 12
+                months.
+            </li>
+        </ul>
+        <h2>What's The Bindel?</h2>
+        <p>
+            The Bindel is an online rental booking platform for short-term stays in Austin, Texas, offering a fun and
+            simple user experience for guests.
+        </p>
+        <h2>Technology Stack and Implementation Approach</h2>
+        <p>
+            As a solo developer, I prioritize choosing technology that allows me to quickly ship new features for
+            startup projects. My go-to stack for The Bindel included Python, FastAPI, and MongoDB for the backend,
+            and Nuxt.js + TypeScript for the frontend. The entire project was hosted on DigitalOcean and a simple
+            Bash script was used for CI/CD.
+        </p>
+        <p>
+            For the frontend, I chose Nuxt.js due to its SSG capabilities and my experience with Vue.js. Nuxt.js
+            supports both SEO benefits of Server-Side-Generation (SSG) and a fast Single Page Application (SPA)
+            experience for users. TypeScript was also used for additional compile-time safety.
+        </p>
+        <p>
+            For the backend, I opted for FastAPI and MongoDB. FastAPI's out-of-the-box OpenAPI support made it easy
+            to integrate with the frontend. MongoDB was a clear choice as it allowed us to move quickly without the
+            initial effort of defining a strong data model. Its aggregation queries also enabled sensible
+            cross-collection joins when necessary.
+        </p>
+
     </div>
-    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-6 w-full">
-        <div>
-            <img src="/bindel/pdp.svg"/>
-        </div>
-        <div>
-            <img src="/bindel/pdp-upgrade-selected.svg"/>
-        </div>
-    </div>
+    <!--    <div class="flex flex-row space-x-2 bg-gray-300 rounded p-4 my-6 w-full">-->
+    <!--        <div>-->
+    <!--            <img src="/bindel/pdp.svg"/>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <img src="/bindel/pdp-upgrade-selected.svg"/>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </section>
 
 <section>
@@ -67,18 +77,68 @@
         </div>
     </div>
     <div>
-        <Caption props="The Bindel — Wireframes illustrating the location and unit-type pickers in their open and intentionally hap-hazard appearance."/>
+        <Caption
+                props="The Bindel — Wireframes illustrating the location and unit-type pickers in their open and intentionally hap-hazard appearance."/>
+    </div>
+    <div class="my-10 max-w-2xl mx-auto">
+        <div class="mx-5 space-y-8">
+            <h2>Making it fun</h2>
+            <p>
+                To make the frontend fun and engaging, despite competition from bigger players with millions in funding,
+                we
+                focused on keeping the Bindel site simple and enjoyable. One key area that received extra attention was
+                the
+                neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation menu
+                haphazardly unfolds into a stack of cards, each featuring a neighborhood with a cute icon to entice
+                interest. Similarly, the locations work the same way, with slightly bigger cards to distinguish between
+                the
+                unit's amenities.
+            </p>
+        </div>
+    </div>
+    <div class="flex space-x-2 flex-row max-w">
+        <video width="1200" height="1200" autoplay loop>
+            <source src="/bindel/BindelNav.mp4" type="video/mp4">
+            <source src="/bindel/BindelNav.mov" type="video/quicktime;codecs=hvec">
+        </video>
+    </div>
+
+
+    <div>
+        <Caption
+                props="Bindel navigation menu implemented."/>
+    </div>
+
+    <div class="my-10 max-w-2xl mx-auto">
+        <div class="mx-5 space-y-8">
+            <p>
+                For the PDP, we relied heavily on previously established patterns, as people already know how to shop
+                stays online. Our efforts focused on making the experience blazing fast. Opening the photo gallery is
+                instantaneous, and interacting with the rest of the page, calendar, and so on, is just as quick.
+            </p>
+        </div>
+    </div>
+
+    <div class="my-10 max-w-2xl mx-auto">
+        <div class="mx-5 space-y-8">
+            <h2>Admin Tools</h2>
+            <p>
+                The website has a significant amount of admin functionality, which includes managing neighborhoods, unit
+                types, and pricing, each with its own dedicated admin interface. However, the most critical admin work
+                was focused on the guest experience, specifically handling reservations, move-in and move-out,
+                invoicing, and payments. To improve upon Stripe's out-of-the-box functionality, we developed our own
+                invoicing tool, designed to address the intricacies of the rental industry. Our primary goal was to make
+                the process simple and error-proof for the customer-facing staff.
+            </p>
+        </div>
+    </div>
+
+    <div class="my-10 max-w-2xl mx-auto">
+        <div class="mx-5 space-y-8">
+            <h2>Check it out</h2>
+Visit <a class="text-blue-700 underline" target="_blank" href="https://thebindel.com">The Bindel.</a>
+        </div>
     </div>
 
 </section>
 
-<section>
-    Notion of making it simple, fun.
-    Happy path is great; but upgrades make it amazing.
-    ☐ Better hero image
-    ☐ Screenshots
-    ☐ Embed the fun menu
-    ☐ Snippets for each key screenshot.
-    ☐ Fun features section.
-    ☐ Technology logos
-</section>
