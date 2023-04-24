@@ -187,7 +187,7 @@
                     <h1 class="mb-3 text-3xl font-bold md:mx-auto">{p.title}</h1>
                 </div>
                 <span class="flex-2 no-underline sm:w-full md:w-1/2 md:mx-auto ">
-                    todo
+                    {p.subtitle}
                 </span>
             </div>
         </a>
