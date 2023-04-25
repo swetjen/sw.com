@@ -1,0 +1,14 @@
+[Unit]
+Description=Release production
+After=syslog.target
+
+[Service]
+ExecStart=/sw/releases/production -config production.yaml
+User=incognito
+WorkingDirectory=/sw/releases/
+Restart=always
+Type=simple
+KillSignal=SIGQUIT
+
+[Install]
+WantedBy=multi-user.target

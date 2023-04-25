@@ -70,7 +70,7 @@ func run(args []string) error {
 	s.TestsDb()
 
 	////
-	s.setupRouter()
+	//s.setupRouter()
 
 	contentRoot, _ := fs.Sub(build, "build")
 	fs := http.FileServer(http.FS(contentRoot))
