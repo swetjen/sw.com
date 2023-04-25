@@ -2,5 +2,7 @@
 /api/build/
 /api/tmp/
 /api/dev.yaml
+/api/production.yaml
+/api/staging.yaml
 /api/api
 /api/.idea
