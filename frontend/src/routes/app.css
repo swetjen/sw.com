@@ -41,6 +41,10 @@ h2 {
     @apply text-xl md:text-2xl font-normal
 }
 
+p a {
+    @apply text-blue-500 underline
+}
+
 
 .nav-link {
     @apply text-2xl font-light border-b-2 border-white leading-6

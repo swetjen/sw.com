@@ -3,7 +3,7 @@ import type { Readable } from 'svelte/store';
 import type { IProjectItem } from '../interfaces/all';
 
 
-let projectsDefault: IProjectItem[] = [
+const projectsDefault: IProjectItem[] = [
   {
     logo: '/logos/bindel.svg',
     brand: 'The Bindel',
@@ -11,7 +11,7 @@ let projectsDefault: IProjectItem[] = [
     title: 'Custom Rental Reservations Platform',
     titleExtended: 'An online booking platform that let guests browse, book and pay',
     subtitle: 'An online rental reservations and booking platform.',
-    dates: 'September 2020 - June 2022',
+    dates: '2020 - 2022',
     slug: '/projects/bindel'
   },
   {
@@ -22,6 +22,16 @@ let projectsDefault: IProjectItem[] = [
     subtitle: 'Conversation intelligence to help businesses improve customer interactions.',
     heroImage: '/bg/tethr.webp',
     dates: '2012 - 2014',
+    slug: '/projects/tethr',
+  },
+  {
+    logo: '/logos/ov-logo-white.svg',
+    brand: 'Osovega',
+    title: 'Trading Platform for Specialty Crops',
+    subtitle: 'Helping buyers and growers get together.',
+    titleExtended: 'Helping buyers and growers get together.',
+    heroImage: '/bg/ov-hero-bg.jpg',
+    dates: '2018 - 2020',
     slug: '/projects/tethr',
   },
   {
@@ -55,3 +65,4 @@ let projectsDefault: IProjectItem[] = [
 
 export const Projects: Readable<IProjectItem[]> = readable(projectsDefault)
 
+// Click Clinician
