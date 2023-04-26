@@ -21,14 +21,13 @@
             <p>
                 Over the years, I have worked on both large and small projects, gaining extensive experience across a
                 variety of project types and working with teams of various sizes, each with their own constraints and
-                goals. Most of my projects involve new product development, technology updates, user experience
-                refreshes, and web service integrations.
+                goals. Most of my projects involve new product development, technology migrations, user experience
+                 modernization, and web service integrations.
             </p>
             <p>
-                Overall, I apply my experience to help teams launch their products quickly. My background frequently
-                helps to guide teams towards success while avoiding unexpected issues. Throughout the design and
-                development process, I prioritize clear goals, communication, user-centered-design, rapid prototyping,
-                and collaboration.
+                I find joy helping teams achieve success and in a job well done.  My background frequently
+                helps to guide the work towards success while avoiding unexpected issues. Throughout the design and
+                development process, I prioritize clear goals, collaboration, user-centered-design, and frequent releases.
             </p>
             <h2>Profile Picture</h2>
             <p>
