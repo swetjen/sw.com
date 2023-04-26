@@ -45,6 +45,13 @@
         concerns. The component is inherently mobile-friendly and allows for easy navigation of the conversation, much
         like a video editing tool.
     </p>
+</section>
+<div class="flex space-x-2 flex-row max-w">
+    <video width="1200" height="1200" autoplay loop>
+        <source src="/videos/alt.mp4" type="video/mp4">
+    </video>
+</div>
+<section class="my-10 max-w-2xl mx-auto space-y-8">
     <p>
         Using this detail view as a basis, views on top of the UI becomes effortless. Begin by creating a persona or
         role interested in specific things, which then become a filterable expression shown in a standard business
