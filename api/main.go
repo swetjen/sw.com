@@ -73,8 +73,8 @@ func run(args []string) error {
 	s.setupRouter()
 
 	contentRoot, _ := fs.Sub(build, "build")
-	fs := http.FileServer(http.FS(contentRoot))
-	s.router.Handle("/*", Adapter("/", fs))
+	buildFs := http.FileServer(http.FS(contentRoot))
+	s.router.Handle("/*", Adapter("/", buildFs))
 
 	log.Printf("Listening on :%v...", config.Port)
 	err = http.ListenAndServe(fmt.Sprintf(":%v", config.Port), s.router)
