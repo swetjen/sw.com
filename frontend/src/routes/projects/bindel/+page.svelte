@@ -143,14 +143,14 @@
 
         </div>
         <p>
-            As a solo developer, I prioritize choosing technology that allows me to quickly. My go-to stack for The Bindel included Python, FastAPI, and MongoDB for the backend, and NuxtJs + TypeScript for the frontend. The entire project was hosted on <a href="https://digitalocean.com" target="_blank">DigitalOcean</a> and a simple Bash script was used for CI/CD.
+            As the sole developer I prioritized choosing technology that allows me to ship features quickly. My go-to stack for The Bindel included Python, FastAPI, and MongoDB for the backend, and NuxtJs + TypeScript for the frontend. The entire project was hosted on <a href="https://digitalocean.com" target="_blank">DigitalOcean</a> and a simple Bash script was used for CI/CD.
         </p>
         <p>
-            For the frontend, I chose <a href="https://nuxtjs.org/" target="_blank">NuxtJs</a> due to its SSG capabilities and my previous experience with VueJs. Nuxt supports both Server-Side-Generation (SSG) for SEO and a fast Single Page Application (SPA) for users. TypeScript's compile-time safety helps get features working with less trial and error.
+            For the frontend, I chose <a href="https://nuxtjs.org/" target="_blank">NuxtJs</a> due to its Server-Side-Generation (SSG) capabilities and my previous experience with VueJs. Since Nuxt supports both SSG for SEO and a fast Single Page Application (SPA) for users, the best of both worlds can be achieved. TypeScript's compile-time safety helps get features working with less trial and error.
         </p>
         <p>
-            For the backend, I opted for <a href="https://fastapi.tiangolo.com/" target="_blank">FastApi</a> and <a href="https://mongodb.com" target="_blank">MongoDB</a>. FastAPI's out-of-the-box OpenAPI support made it easy to integrate with the frontend.  OpenAPI is also very helpful for testing the backend independtly of the frontend implementation. MongoDB was a clear choice as it allowed us to move quickly without the
-            initial effort of defining a strong data model. Its aggregation queries also enabled sensible cross-collection joins after patterns in data began to emerge.
+            For the backend, I opted for <a href="https://fastapi.tiangolo.com/" target="_blank">FastApi</a> and <a href="https://mongodb.com" target="_blank">MongoDB</a>. FastAPI's out-of-the-box OpenAPI support made it easy to integrate with the frontend.  OpenAPI is also very helpful in testing the backend independently of the frontend implementation. MongoDB was a clear choice as it allowed us to move quickly without the
+            initial effort of defining a strong data model. Later, Mongo's Aggregation Pipeline enabled sensible cross-collection &ldquo;joins&rdquo; after patterns in the data began to emerge.
         </p>
 
     </div>
@@ -181,8 +181,7 @@
                 the neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation
                 menu
                 haphazardly unfolds into a stack of cards, each featuring a neighborhood with a cute icon to entice
-                interest. Similarly, the locations work the same way, with slightly bigger cards to distinguish between
-                the unit's amenities.
+                interest. Similarly, the unit picker works the same way, with slightly bigger cards to help distinguish amenities.
             </p>
         </div>
     </div>

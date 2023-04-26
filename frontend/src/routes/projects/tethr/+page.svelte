@@ -33,9 +33,10 @@
     <p>
         Having spent a decade in Fortune 50 corporate America, I witnessed firsthand the sheer size and complexity of
         large organizations. Aligning staff with the latest brand positioning and standard operating procedures (SOP)
-        can be incredibly challenging. Tethr was born out of the idea of simplifying this process by automatically
-        documenting employee-customer interactions. This virtuous cycle could lead to better outcomes for customers and
-        more effective employees, without relying on employee note-taking or self-awareness.
+        can be incredibly challenging. </p>
+    <p>Tethr was born out of the idea of simplifying things automatically documenting employee-customer interactions.
+        This virtuous cycle could lead to better outcomes for customers and more effective employees, without relying on
+        note-taking or the employee's self-awareness.
     </p>
     <h2>Concept Development</h2>
     <p>

@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { fade, fly } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { page } from '$app/stores';
   import {Contact} from '../../stores/stores';
-  import type {IProjectItem} from '../../interfaces/all';
   import { Projects } from '../../stores/projects';
   import NavProject from './NavProject.svelte';
+  import BannerWorkInProgress from '../BannerWorkInProgress.svelte';
 
   // menu and contact states
-  let WorkOpen: boolean = false
-  let WorkMobileOpen: boolean = false
-  let MainMenuOpen: boolean = false
+  let WorkOpen = false
+  let WorkMobileOpen = false
+  let MainMenuOpen = false
 
   function closeMenu(event) {
     if (event.detail?.text === 'click') {
@@ -41,14 +41,12 @@
 <!--    </nav>-->
 <!--</header>-->
 {#if WorkOpen || MainMenuOpen }
-    <!--
-        Todo - Transition
-    -->
     <div transition:fade="{{ duration: 200 }}"  on:click={Reset} class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 {/if}
 
 <!--<button on:click={() => MainMenuOpen = !MainMenuOpen} type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">-->
 
+<BannerWorkInProgress/>
 
 <header class="relative isolate z-10 bg-white">
     <nav class="mx-auto flex max-w-5xl items-center justify-between pt-6 px-6 lg:px-8" aria-label="Global">
@@ -114,7 +112,7 @@
         <div class="fixed inset-0 z-10"></div>
         <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
+                <a href="/" class="-m-1.5 p-1.5">
                     <span class="sr-only">Spence Wetjen</span>
                     <h1 aria-description="Spence Wetjen">Spence Wetjen</h1>
                 </a>
@@ -150,7 +148,7 @@
                             </div>
                             {/if}
                         </div>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+                        <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
                     </div>
                     <div class="py-6">
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact &rarr;</a>
