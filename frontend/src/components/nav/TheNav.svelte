@@ -2,14 +2,14 @@
   import { fade, fly } from 'svelte/transition';
   import { page } from '$app/stores';
   import {Contact} from '../../stores/stores';
-  import type {IProjectItem} from '../../interfaces/all';
   import { Projects } from '../../stores/projects';
   import NavProject from './NavProject.svelte';
+  import BannerWorkInProgress from '../BannerWorkInProgress.svelte';
 
   // menu and contact states
-  let WorkOpen: boolean = false
-  let WorkMobileOpen: boolean = false
-  let MainMenuOpen: boolean = false
+  let WorkOpen = false
+  let WorkMobileOpen = false
+  let MainMenuOpen = false
 
   function closeMenu(event) {
     if (event.detail?.text === 'click') {
@@ -41,14 +41,12 @@
 <!--    </nav>-->
 <!--</header>-->
 {#if WorkOpen || MainMenuOpen }
-    <!--
-        Todo - Transition
-    -->
     <div transition:fade="{{ duration: 200 }}"  on:click={Reset} class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 {/if}
 
 <!--<button on:click={() => MainMenuOpen = !MainMenuOpen} type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">-->
 
+<BannerWorkInProgress/>
 
 <header class="relative isolate z-10 bg-white">
     <nav class="mx-auto flex max-w-5xl items-center justify-between pt-6 px-6 lg:px-8" aria-label="Global">
