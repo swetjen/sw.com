@@ -22,7 +22,7 @@
 
 <section class="my-10 max-w-2xl mx-auto space-y-8">
     <h2>At a glance</h2>
-    <ul class="list-disc">
+    <ul class="list-disc list-inside">
         <li>Co-founded the company.</li>
         <li>Designed an award-winning user experience (UX) that facilitates easy navigation of conversations.</li>
         <li>Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 in 12 months.

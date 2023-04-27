@@ -32,7 +32,7 @@ const projectsDefault: IProjectItem[] = [
     titleExtended: 'Helping buyers and growers meet and transact with confidence.',
     heroImage: '/bg/ov-hero-bg.jpg',
     dates: '2018 - 2020',
-    slug: '/projects/tethr',
+    slug: '/projects/osovega',
   },
   {
     logo: '/logos/bby.svg',
