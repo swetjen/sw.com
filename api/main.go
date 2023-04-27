@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"embed"
 	"errors"
 	"flag"
@@ -9,6 +10,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/sw.com/api/db"
 	"go.mongodb.org/mongo-driver/mongo"
+	"golang.org/x/crypto/acme/autocert"
 	"io/fs"
 	"log"
 	"net/http"
@@ -69,21 +71,38 @@ func run(args []string) error {
 
 	s.TestsDb()
 
-	////
-	//s.setupRouter()
+	s.setupRouter()
 
+	// todo, move to router
 	contentRoot, _ := fs.Sub(build, "build")
 	buildFs := http.FileServer(http.FS(contentRoot))
 	s.router.Handle("/*", Adapter("/", buildFs))
 
+	if s.config.Environment == Production {
+		certManager := autocert.Manager{
+			Prompt:     autocert.AcceptTOS,
+			HostPolicy: autocert.HostWhitelist(config.Host),
+			Cache:      autocert.DirCache("/tmp/certs"),
+		}
+
+		server := &http.Server{
+			Addr: ":https",
+			TLSConfig: &tls.Config{
+				GetCertificate: certManager.GetCertificate,
+				MinVersion:     tls.VersionTLS12,
+			},
+		}
+
+		go http.ListenAndServe(":http", certManager.HTTPHandler(nil))
+		log.Fatal(server.ListenAndServeTLS("", ""))
+		return nil
+	}
 	log.Printf("Listening on :%v...", config.Port)
 	err = http.ListenAndServe(fmt.Sprintf(":%v", config.Port), s.router)
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	return nil
-
 }
 
 func main() {

@@ -4,6 +4,12 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+const (
+	Dev        = "dev"
+	Staging    = "staging"
+	Production = "production"
+)
+
 type Config struct {
 	Environment string `yaml:"env"`
 	AdminEmail  string `yaml:"admin_email"`
