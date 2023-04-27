@@ -28,7 +28,7 @@ fi
 
   # Make Symlink
   cd $RELEASE_FOLDER || exit 1
-  if [ -d "$TARGET" ]; then
+  if [ -f "$TARGET" ]; then
     rm "$TARGET"
   fi
 
