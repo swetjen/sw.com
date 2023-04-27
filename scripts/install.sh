@@ -5,6 +5,8 @@ USER="incognito"
 GROUP="incognito"
 SERVER_INBOX="/sw/_inbox"
 
+SERVICE="sw-production.service"
+
 BASE_FOLDER="/sw"
 RELEASE_FOLDER="$BASE_FOLDER/releases"
 
@@ -33,6 +35,7 @@ fi
   fi
 
   ln -s "$RELEASE_FOLDER/$RELEASE_NAME" $TARGET || exit 1
+  sudo systemctl restart "$SERVICE"
 
   exit 0
 

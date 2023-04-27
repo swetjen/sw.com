@@ -91,6 +91,7 @@ func run(args []string) error {
 				GetCertificate: certManager.GetCertificate,
 				MinVersion:     tls.VersionTLS12,
 			},
+			Handler: s.router,
 		}
 
 		go http.ListenAndServe(":http", certManager.HTTPHandler(nil))
