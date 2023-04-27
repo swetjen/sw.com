@@ -22,7 +22,7 @@
 
 <section class="my-10 max-w-2xl mx-auto space-y-8">
     <h2>At a glance</h2>
-    <ul class="list-disc list-inside">
+    <ul class="list-disc list-outside">
         <li>Co-founded the company.</li>
         <li>Designed an award-winning user experience (UX) that facilitates easy navigation of conversations.</li>
         <li>Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 in 12 months.
@@ -31,18 +31,21 @@
     </ul>
     <h2>The Problem</h2>
     <p>
-        Having spent a decade in Fortune 50 corporate America, I witnessed firsthand the sheer size and complexity of
-        large organizations. Aligning staff with the latest brand positioning and standard operating procedures (SOP)
-        can be incredibly challenging. </p>
-    <p>Tethr was born out of the idea of simplifying things automatically documenting employee-customer interactions.
-        This virtuous cycle could lead to better outcomes for customers and more effective employees, without relying on
-        note-taking or the employee's self-awareness.
+        After spending a decade in Fortune 50 corporate America, I personally experienced the immense size and
+        complexity of large organizations. Ensuring that all employees are aligned with the company's current messaging
+        can be incredibly challenging, and certain types of messaging can carry significant risks if not executed
+        correctly, such as legal and compliance issues.
+    <p>Tethr was born out of the idea of simplifying things by automatically documenting employee-customer interactions.
+    Since its automatic it wouldn't rely on note-taking or the employee's self-awareness. Aggregated and used a learning tool, it would become a virtuous cycle leading to on-message employees and better outcomes for customers.
     </p>
     <h2>Concept Development</h2>
     <p>
-        I worked through several concepts before finalizing the wave-form inspired UI, which subtly indicates to users
-        that they are working with audio. The callouts and double wave show what is happening and highlight key
-        concerns. The component is inherently mobile-friendly and allows for easy navigation of the conversation, much
+        I worked through several concepts before finalizing the double wave-form inspired UI, which subtly indicates to
+        users
+        that they are working with audio. The callouts along the wave-form highlight key and make the flow of the
+        conversation visible at a glance.
+        The component is inherently mobile-friendly, works for conversations of most lengths, and allows for easy
+        navigation of the conversation, much
         like a video editing tool.
     </p>
 </section>

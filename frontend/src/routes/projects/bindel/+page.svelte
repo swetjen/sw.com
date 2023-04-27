@@ -144,7 +144,7 @@
         </p>
         <p>
             For the frontend, I chose <a href="https://nuxtjs.org/" target="_blank">NuxtJs</a> due to its
-            Server-Side-Generation (SSG) capabilities and my fluency with VueJs. Since Nuxt supports both
+            Server-Side-Generation (SSG) capabilities and familiarity with VueJs. Since Nuxt supports both
             SSG for SEO and a fast Single Page Application (SPA) for users, the best of both worlds can be achieved.
             TypeScript's compile-time safety helps get features working with less trial and error.
         </p>
