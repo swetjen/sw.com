@@ -8,7 +8,6 @@
   const tokens = $page.url.pathname.split('/');
   const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length -1]))
 
-
 </script>
 
 <svelte:head>
@@ -19,6 +18,7 @@
 <section class="my-10">
     <ProjectHero project={thisProject}/>
 </section>
+
 
 <section class="my-10 space-y-8">
     <p>todo</p>
