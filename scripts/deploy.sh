@@ -17,6 +17,8 @@ function build_assets () {
   npm run build || exit 1
   cd .. || exit 1
   cd api || exit 1
+  export GOOS=linux
+  export GOARCH=amd64
   go build -o release . || exit 1
 
   # Create Inbox
