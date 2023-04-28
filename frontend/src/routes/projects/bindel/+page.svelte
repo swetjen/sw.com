@@ -1,14 +1,14 @@
 <script lang="ts">
-  import type {IProjectItem} from '../../../interfaces/all';
-  import ProjectHero from '../../../components/projects/ProjectHero.svelte';
+    import type {IProjectItem} from '../../../interfaces/all';
+    import ProjectHero from '../../../components/projects/ProjectHero.svelte';
 
-  import {Projects} from '../../../stores/projects';
-  import {page} from '$app/stores';
-  import Caption from '../../../components/Caption.svelte';
-  import Image from '../../../components/Image.svelte';
+    import {Projects} from '../../../stores/projects';
+    import {page} from '$app/stores';
+    import Caption from '../../../components/Caption.svelte';
+    import Image from '../../../components/Image.svelte';
 
-  const tokens = $page.url.pathname.split('/');
-  const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length - 1]))
+    const tokens = $page.url.pathname.split('/');
+    const thisProject: IProjectItem = $Projects.find((p) => p.slug.includes(tokens[tokens.length - 1]))
 </script>
 
 <svelte:head>
@@ -23,16 +23,19 @@
 <section class="my-10 max-w-2xl mx-auto">
     <div class="mx-5 space-y-8">
         <h2>At a glance</h2>
-        <ul class="list-disc list-inside">
-            <li>
-                As the sole developer, designed and implemented an online booking platform and reservation management
-                system.
-            </li>
-            <li>
-                Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 in 12
-                months.
-            </li>
-        </ul>
+        <div class="px-3">
+            <ul class="list-disc list-outside">
+                <li>
+                    As the sole developer, designed and implemented an online booking platform and reservation
+                    management
+                    system.
+                </li>
+                <li>
+                    Successfully launched the platform and achieved a monthly recurring revenue (MRR) of $60,000 in 12
+                    months.
+                </li>
+            </ul>
+        </div>
         <h2>What's The Bindel?</h2>
         <p>
             The Bindel is an online rental booking platform for short-term stays in Austin, Texas, offering a fun and

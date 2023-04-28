@@ -25,9 +25,7 @@
                  modernization, and web service integrations.
             </p>
             <p>
-                I find purpose helping teams achieve success and satisfaction in a job well done. My background frequently
-                helps to guide the work towards success while avoiding unexpected issues. Throughout the design and
-                development process, I advocate for clear goals, collaboration, user-centered-design, and frequent releases.
+                I find purpose in helping teams achieve success and satisfaction in a job well done. With my background, I often guide the work towards success while avoiding unexpected issues. Throughout the design and development process, I prioritize clear goals, collaboration, user-centered design, and frequent releases.
             </p>
             <h2>Profile Picture</h2>
             <p>
