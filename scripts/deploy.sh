@@ -5,13 +5,13 @@ SERVER_INBOX="/sw/_inbox/"
 CUR_PATH=$(pwd)
 
 function deploy () {
-  # Triggers Deployment Script for both Frontend and Backend apps
+  # Triggers Deployment Script for release binary
   ssh "$SERVER" 'bash -s' < "$CUR_PATH/scripts/install.sh" "$TARGET"
   echo "==> Deployed."
 }
 
 function build_assets () {
-  # Builds the frontend application for staging for production.
+  # Builds the application
   echo "==> Creating build artifacts"
   cd frontend || exit 1
   npm run build || exit 1
