@@ -15,7 +15,7 @@
             <p>
                 Hi, I'm Spence Wetjen - a full-stack developer and UX designer based in Austin, Texas, USA. With 15
                 years of experience in the e-commerce, software-as-a-service, and web industries, I have had the
-                privilege of working with some of the world's leading organizations such as Microsoft, Google, Apple,
+                privilege of working with some of the world's leading organizations such as Microsoft, Samsung, Apple,
                 Best Buy, and Cisco.
             </p>
             <p>

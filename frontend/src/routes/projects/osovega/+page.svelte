@@ -27,14 +27,15 @@
             <div class="px-3">
                 <ul class="list-disc list-outside">
                     <li>
-                        Designed a hybrid trading platform and seller marketplace that supported futures contracts,
+                        Designed and developed a hybrid trading platform and seller marketplace that supported futures
+                        contracts,
                         derivatives, and more.
-                    </li>
-                    <li>
-                        Led a team of four engineers to deliver a minimum viable product (MVP) in just ten months.
                     </li>
                     <li> Developed a crop production tool for growers that integrated with the marketplace, helping
                         speculators predict future supply.
+                    </li>
+                    <li>
+                        Led a team of four engineers to deliver a minimum viable product (MVP) in just ten months.
                     </li>
                 </ul>
             </div>
@@ -62,7 +63,8 @@
             <p>
                 For the growers, who were the sellers on the marketplace, two analogies became apparent. First, growers
                 are conditioned to lock in a price for their crop based on the movement of futures prices. Second, when
-                growing a new crop, growers may require support with farming practices, farm inputs, and harvesting.
+                growing a new crop, growers may require support with crop-specific farming practices, farm inputs, and
+                harvesting.
             </p>
         </div>
     </div>
@@ -72,7 +74,7 @@
             <h2>Growers Dashboard</h2>
             <p>
                 We opted for a hybrid e-commerce style interface that took inspiration from Amazon's seller site.
-                Growers could list their products and set a fixed price or a price range that they were willing to
+                Growers could list their products and set a fixed price or set a price range that they were willing to
                 consider. Although we were not authorized to act as a Market Maker in the regulatory sense, we hired
                 agents to connect with buyers and assist in facilitating the transaction all the way to delivery.
             </p>
@@ -95,20 +97,17 @@
         <div class="mx-5 space-y-8">
             <h2>Technology</h2>
             <p>
-                We chose to use C# DotNet and Postgres for the backend of the trading marketplace. The frontend was
-                built in Vue and connected through Restful APIs. Our aim was to be able to rapidly scale the platform
-                while leveraging the benefits of the DotNet ecosystem for integrations and the compiler guarantees of
-                C#.
+                We chose to use C# DotNet and Postgres for the backend of the trading marketplace. The DotNet ecosystem
+                for integrations and the compiler guarantees of C# made sense in the context of this product. The
+                frontend was built in Vue and connected through Restful APIs.
             </p>
             <p>
                 For the grower app, we decided to use Python with FastAPI. This application was primarily focused on
-                CRUD operations with lightweight integrations to weather stations, drone data, and other sources.
-                Python's flexibility and speed allowed us to deliver this part of the application quickly.
+                CRUD operations with integrations to weather stations, drone data, and other sources. Python's
+                flexibility and speed allowed us to deliver this part of the application quickly.
             </p>
             <p>
-                We used a mono-repo and a single monolithic frontend application written in Vue. This approach provided
-                a seamless user experience for growers and allowed us to easily integrate marketplace data with upcoming
-                production data from the grower app.
+                We chose a monolithic frontend application all written in Vue. This approach provided a seamless user experience for growers and allowed us to easily integrate marketplace data with upcoming production data from the grower app.
             </p>
         </div>
     </div>

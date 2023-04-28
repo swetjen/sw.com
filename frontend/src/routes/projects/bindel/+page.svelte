@@ -181,14 +181,7 @@
         <div class="mx-5 space-y-8">
             <h2>Making it fun</h2>
             <p>
-                To make the frontend fun and engaging, despite competition from bigger players with millions in funding,
-                we focused on keeping the Bindel site simple and enjoyable. One key area that received extra attention
-                was
-                the neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation
-                menu
-                haphazardly unfolds into a stack of cards, each featuring a neighborhood with a cute icon to entice
-                interest. Similarly, the unit picker works the same way, with slightly bigger cards to help distinguish
-                amenities.
+                To make the frontend fun and engaging, despite competition from other players with bigger budgets, we focused on keeping the Bindel site simple and enjoyable. One key area that received extra attention was the neighborhood and unit-type picker. To achieve a seamless and enjoyable experience, the navigation menu haphazardly unfolds into a stack of cards, each featuring a neighborhood with a cute icon to entice interest. Similarly, the unit picker works the same way, with slightly bigger cards to help distinguish amenities.
             </p>
         </div>
     </div>
@@ -208,9 +201,7 @@
     <div class="my-10 max-w-2xl mx-auto">
         <div class="mx-5 space-y-8">
             <p>
-                For the PDP, we relied heavily on previously established patterns, as people already know how to shop
-                stays online. Our efforts focused on making the experience blazing fast. Opening the photo gallery is
-                instantaneous, and interacting with the rest of the page, calendar, and so on, is just as quick.
+                For the product detail page (PDP), we relied heavily on previously established patterns, as people already know how to shop stays online. Our efforts focused on making the experience blazing fast. Opening the photo gallery is instantaneous, and so is interacting with the rest of the page, calendar, buy-box, and so on.
             </p>
         </div>
     </div>
@@ -223,7 +214,7 @@
                 types, and pricing, each with its own dedicated admin interface. However, the most critical admin work
                 was focused on the guest experience, specifically handling reservations, move-in and move-out,
                 invoicing, and payments. To improve upon Stripe's out-of-the-box functionality, we developed our own
-                invoicing tool, designed to address the intricacies of the rental industry. Our primary goal was to make
+                invoicing tool designed to address the intricacies of the rental industry. Our primary goal was to make
                 the process simple and error-proof for the customer-facing staff.
             </p>
         </div>
