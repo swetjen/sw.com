@@ -63,7 +63,7 @@
             <p>
                 For the growers, who were the sellers on the marketplace, two analogies became apparent. First, growers
                 are conditioned to lock in a price for their crop based on the movement of futures prices. Second, when
-                growing a new crop, growers may require support with crop-specific farming practices, farm inputs, and
+                growing a new crop, growers may require support with farming practices, farm inputs, and
                 harvesting.
             </p>
         </div>
@@ -81,7 +81,7 @@
             <h2>Predicting Crop Production</h2>
             <p>
                 In low volume markets, the spot price of goods can vary wildly, making it difficult to ensure a
-                consistent supply. To address this challenge, we developed a farm production tool that helps growers -
+                consistent supply. To address this challenge, we developed a farm production tool that helped growers -
                 and the marketplace as a whole - predict the volume of crops likely to be available in a given growing
                 season.
             </p>
@@ -98,8 +98,7 @@
             <h2>Technology</h2>
             <p>
                 We chose to use C# DotNet and Postgres for the backend of the trading marketplace. The DotNet ecosystem
-                for integrations and the compiler guarantees of C# made sense in the context of this product. The
-                frontend was built in Vue and connected through Restful APIs.
+                for integrations and the compiler guarantees of C# made sense in the context of this product. A series of Restful APIs exposed the backend service.
             </p>
             <p>
                 For the grower app, we decided to use Python with FastAPI. This application was primarily focused on
