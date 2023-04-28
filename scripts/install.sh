@@ -1,8 +1,6 @@
 #!/bin/bash
 
 TARGET="production"
-USER="incognito"
-GROUP="incognito"
 SERVER_INBOX="/sw/_inbox"
 
 SERVICE="sw-production.service"
