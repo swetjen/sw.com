@@ -69,7 +69,7 @@
             </div>
             <div class="text-sm p-2 bg-gray-50 rounded h-18 space-x-2 flex h-full flex-col justify-between items-center">
                 <div class="w-6 max-w-full">
-                    <TechLogo name="Postgres" />
+                    <TechLogo name="Digital Ocean" />
                 </div>
                 Digital Ocean
             </div>
