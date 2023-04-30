@@ -23,8 +23,7 @@ fi
 
   cd "$RELEASE_FOLDER" || exit 1
   # Rename build assets
-  cp "$SERVER_INBOX/release" "$RELEASE_FOLDER/$RELEASE_NAME" || exit 1
-  mv "$SERVER_INBOX/release" "$SERVER_INBOX/$RELEASE_NAME" || exit 1
+  mv "$SERVER_INBOX/release" "$RELEASE_FOLDER/$RELEASE_NAME" || exit 1
 
   # Make Symlink
   cd $RELEASE_FOLDER || exit 1
