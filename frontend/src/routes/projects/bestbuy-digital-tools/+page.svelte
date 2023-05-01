@@ -57,13 +57,12 @@
             we had in inventory. Worst, the company had overpaid for it.
         </p>
         <p>
-            Fed up with the status quo I set to changing the status quo. I began by mapping out all of Best Buy's
-            digital tools, focusing on overlapping concern, gap areas and cost. with emphasis to overlapping concerns
-            and cost. Then came the hard part of getting people on board.
+            Fed up with the status quo I set to changing it. I began by mapping out all of Best Buy's
+            digital tools, focusing on emphasis overlapping concerns, gap areas and cost. I was fortune to have a supportive leadership team who enthusiastically supported me.  Then came the hard part of getting people outside of my organization on board.
         </p>
         <p>
-            Delivering a project of this magnitude in a large corporation requires both diplomacy and tenacity. The
-            delicate part is helping teams transition from a state of caution to being supportive by demonstrating how
+            Delivering a project of this magnitude in a large corporation requires both diplomacy and persistence. The
+            delicate part is helping outside teams transition from a state of caution, or even opposition, to being supportive by demonstrating how
             their work and objectives align with the outcome and business benefits being pursued. At the same time,
             tenacity is needed as the teams that need to support the project have competing priorities and may be
             stretched thin.
@@ -72,12 +71,12 @@
         <div class="px-3">
             <ul class="list-disc list-outside">
                 <li>
-                    Clearly define the problem at hand
+                    Clearly define the opportunity/problem at hand
                 </li>
                 <li>
-                    Gain agreement that the problem affects everyone
+                    Gain agreement that this affects everyone
                 </li>
-                <li>Reach an agreement that the benefits of solving the problem outweigh the potential risks and other
+                <li>Reach an agreement that the benefits of solving the matter outweigh the potential risks and other
                     competing priorities.
                 </li>
             </ul>

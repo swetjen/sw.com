@@ -43,7 +43,7 @@
     <h2>Concept Development</h2>
     <p>
         I worked through several concepts before settling on the double wave-form inspired UI. It starts with the
-        familiar user feeling of working with audio. Callouts along the wave-form highlight important moments, making it
+        familiarity of working with audio. Callouts along the wave-form highlight important moments, making it
         easy to visualize the flow of the conversation. The component is mobile-friendly, suitable for conversations of
         various lengths, and allows for seamless navigation, similar to a video editing tool.
     </p>
@@ -55,7 +55,7 @@
 </div>
 <section class="my-10 max-w-2xl mx-auto space-y-8">
     <p>
-        By building the detail view as a foundation, creating additional views on top of the UI becomes a breeze. The first step is to define a persona or role with particular interests, which can then be used to create a filterable expression displayed in a familiar business intelligence-style view. And with integrations, this streamlined approach enables executives to extract value of Tethr through their favorite business intelligence (BI) platform.
+        By building the detail view as a foundation the creation of additional views on top of the UI becomes a breeze. The first step is to define a persona or profile with particular interests which is expressed a series of filterable expressions. Then display the results in traditional business intelligence-style view. With integrations, this streamlined approach enables executives to extract value of Tethr through their favorite business intelligence (BI) platform.
     </p>
     <h2>Check it out</h2>
     <p>Visit <a target="_blank" href="https://tethr.com">Tethr</a>.</p>
