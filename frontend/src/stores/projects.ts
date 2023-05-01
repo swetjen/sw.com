@@ -15,16 +15,6 @@ const projectsDefault: IProjectItem[] = [
     slug: '/projects/bindel'
   },
   {
-    logo: '/logos/tethr.svg',
-    brand: 'Tethr',
-    title: 'AI-powered Conversation Intelligence',
-    titleExtended: 'Tethr is a platform that uses AI-powered conversation intelligence to help businesses improve customer interactions and drive better outcomes.',
-    subtitle: 'Conversation intelligence to help businesses improve customer interactions.',
-    heroImage: '/bg/tethr.webp',
-    dates: '2012 - 2014',
-    slug: '/projects/tethr',
-  },
-  {
     logo: '/logos/ov-logo-white.svg',
     brand: 'Osovega',
     title: 'Trading Platform for Specialty Crops',
@@ -33,6 +23,16 @@ const projectsDefault: IProjectItem[] = [
     heroImage: '/bg/ov-hero-bg.jpg',
     dates: '2018 - 2020',
     slug: '/projects/osovega',
+  },
+  {
+    logo: '/logos/tethr.svg',
+    brand: 'Tethr',
+    title: 'AI-powered Conversation Intelligence',
+    titleExtended: 'Tethr is a platform that uses AI-powered conversation intelligence to help businesses improve customer interactions and drive better outcomes.',
+    subtitle: 'Conversation intelligence to help businesses improve customer interactions.',
+    heroImage: '/bg/tethr.webp',
+    dates: '2012 - 2014',
+    slug: '/projects/tethr',
   },
   {
     logo: '/logos/bby.svg',

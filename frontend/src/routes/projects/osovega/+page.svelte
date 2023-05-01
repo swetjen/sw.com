@@ -132,8 +132,7 @@
         <div class="mx-5 space-y-8">
             <p>
                 The production app tracked inputs and estimated yields based on feedback from specialists who
-                visited
-                the farms. This information helped growers plan their harvest and production schedules, as well as
+                visited the farms. This information helped growers plan their harvest and production schedules, as well as
                 provide buyers with a more reliable estimate of future supply.
             </p>
         </div>
@@ -180,23 +179,18 @@
             </div>
             <p>
                 We chose to use C# DotNet and Postgres for the backend of the trading marketplace. The DotNet
-                ecosystem
-                for integrations and the language level compiler guarantees made sense in the context of this
-                product. A
-                series of Restful APIs exposed the backend service.
+                ecosystem for integrations and the language level compiler guarantees made sense in the context of this
+                product. A series of Restful APIs exposed the backend service.
             </p>
             <p>
                 For the farm production app, we decided to use Python with FastAPI for the backend. This application
-                was
-                primarily focused on CRUD operations with integrations to weather stations, drone data, and other
+                was primarily focused on CRUD operations with integrations to weather stations, drone data, and other
                 sources. Python's flexibility and speed allowed us to deliver this part of the application quickly.
             </p>
             <p>
                 We chose a monolithic frontend application all written in Vue. This approach provided a seamless
-                user
-                experience for growers and allowed us to easily integrate marketplace data with production data
-                coming
-                from the fields.
+                user experience for growers and allowed us to easily integrate marketplace data with production data
+                coming from the fields.
             </p>
         </div>
     </div>
