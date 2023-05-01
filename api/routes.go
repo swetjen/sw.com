@@ -73,10 +73,11 @@ func Encode(w http.ResponseWriter, r *http.Request, status int, v interface{}) e
 
 func (s *Server) handleContactForm(w http.ResponseWriter, r *http.Request) {
 	type ContactFormRequest struct {
-		Name    string `json:"name,required"`
-		Email   string `json:"email"`
-		Message string `json:"message"`
-		Guid    string `bson:"guid"`
+		Name      string `json:"name,required"`
+		Email     string `json:"email"`
+		Message   string `json:"message"`
+		Guid      string `bson:"guid"`
+		TsCreated int64  `bson:"tsCreated"`
 	}
 
 	type ContactFormResponse struct {
@@ -91,6 +92,7 @@ func (s *Server) handleContactForm(w http.ResponseWriter, r *http.Request) {
 	}
 
 	form.Guid = strings.Replace(uuid.New().String(), "-", "", -1)
+	form.TsCreated = time.Now().Unix()
 
 	fmt.Printf("%v\n", form)
 
