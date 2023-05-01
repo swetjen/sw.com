@@ -45,7 +45,8 @@
       return
     }
     is_submitting = true
-    const res = await fetch('http://localhost:3000/api/v1/contact', {
+      // todo : handle environments
+    const res = await fetch('https://spencewetjen.com/api/v1/contact', {
       method: 'POST',
       body: JSON.stringify(form
       )

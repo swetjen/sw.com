@@ -8,7 +8,7 @@
 
   // menu and contact states
   let WorkOpen = false
-  let WorkMobileOpen = false
+  let WorkMobileOpen = true
   let MainMenuOpen = false
 
   function closeMenu(event) {
@@ -19,7 +19,7 @@
 
   function Reset() {
     WorkOpen = false
-    WorkMobileOpen = false
+    WorkMobileOpen = true
     MainMenuOpen = false
   }
 
@@ -103,8 +103,6 @@
 
 
 
-
-
     <!-- Mobile menu, show/hide based on menu open state. -->
     {#if MainMenuOpen}
     <div transition:fade="{{ duration: 100 }}" class="lg:hidden" role="dialog" aria-modal="true">
@@ -143,7 +141,8 @@
                             <div class="mt-2 space-y-2" id="disclosure-1">
 
                                 {#each $Projects as p (p.title)}
-                                    <a on:click={Reset} href={p.slug} class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">{p.title}</a>
+                                        <NavProject props={p} on:message={closeMenu} />
+<!--                                    <a on:click={Reset} href={p.slug} class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">{p.title}</a>-->
                                 {/each}
                             </div>
                             {/if}
@@ -151,7 +150,7 @@
                         <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
                     </div>
                     <div class="py-6">
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact &rarr;</a>
+                        <button on:click={Contact.toggle} class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact &rarr;</button>
                     </div>
                 </div>
             </div>
