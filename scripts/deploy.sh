@@ -19,7 +19,7 @@ function build_assets () {
   cd api || exit 1
   export GOOS=linux
   export GOARCH=amd64
-  go build -o release . || exit 1
+  go build -ldflags="-s -w" -o release . || exit 1
 
   # Create Inbox
   if ssh "$SERVER" "[ ! -d $SERVER_INBOX ]"; then
