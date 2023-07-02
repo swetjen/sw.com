@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="80px" viewBox="0 0 145 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>UX Research</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="3.76811594" y="0" width="61.2318841" height="76" rx="3"></rect>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-1772.000000, -2116.000000)">
+            <g id="Group-17" transform="translate(1772.000000, 2118.000000)">
+                <g id="Group-10-Copy" transform="translate(10.000000, 7.000000)">
+                    <g id="device-gfroup-copy-3">
+                        <g id="Laptop">
+                            <path d="M5,61 L117,61 C115.494843,65.6666667 113.575314,68 111.241415,68 C81.010539,68 41.8114183,68 10.1899575,68 C7.39753052,68 5.66754469,65.6666667 5,61 Z M12,2 L100,2 C101.656854,2 103,3.34314575 103,5 L103,54 C103,55.6568542 101.656854,57 100,57 L12,57 C10.3431458,57 9,55.6568542 9,54 L9,5 C9,3.34314575 10.3431458,2 12,2 Z" id="Shadow" fill="#D3DEE5"></path>
+                            <path d="M0,59 L112,59 C110.494843,63 108.575314,65 106.241415,65 C76.010539,65 36.8114183,65 5.18995749,65 C2.39753052,65 0.667544689,63 0,59 Z" id="Keyboard" stroke="#000000" stroke-width="2"></path>
+                            <path d="M10,0 L102,0 C103.656854,-3.04359188e-16 105,1.34314575 105,3 L105,59 L7,59 L7,3 C7,1.34314575 8.34314575,3.04359188e-16 10,0 Z" id="Screen" stroke="#000000" stroke-width="2"></path>
+                        </g>
+                        <g id="Tablet-Copy" transform="translate(66.000000, 9.000000)">
+                            <rect id="Rectangle-2-Copy-4" fill="#FFFFFF" x="0" y="0" width="67" height="59" rx="3"></rect>
+                            <rect id="Rectangle-2-Copy-5" fill="#D3DEE5" x="7" y="6" width="41" height="53" rx="3"></rect>
+                            <ellipse id="Oval-Copy" fill="#D3DEE5" cx="24" cy="52.5" rx="2" ry="2.5"></ellipse>
+                            <rect id="Rectangle-2" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" x="4" y="3" width="41" height="53" rx="3"></rect>
+                            <circle id="Oval" stroke="#000000" stroke-width="1.5" cx="24.5" cy="49.5" r="2.5"></circle>
+                        </g>
+                        <g id="Group-2" transform="translate(101.000000, 19.000000)">
+                            <g id="Phone">
+                                <rect id="Rectangle-2-Copy-3" fill="#FFFFFF" x="0" y="0" width="26" height="49" rx="3"></rect>
+                                <rect id="Rectangle-2-Copy" fill="#D3DEE5" x="6" y="6" width="26" height="43" rx="3"></rect>
+                                <rect id="Rectangle-2" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" x="3" y="3" width="26" height="43" rx="3"></rect>
+                                <circle id="Oval" stroke="#000000" stroke-width="1.5" cx="16" cy="40" r="2"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <rect id="Rectangle-6-Copy" fill="#FFFFFF" x="8" y="4" width="49" height="71"></rect>
+                <rect id="Rectangle-5" fill-opacity="0.75" fill="#FFFFFF" x="10" y="4" width="135" height="70"></rect>
+                <g id="Group-18-Copy">
+                    <g id="Group-15">
+                        <rect id="Rectangle-6-Copy-2" fill="#FFFFFF" x="1.88405797" y="3.75308642" width="46.1594203" height="66.617284"></rect>
+                        <g id="Rectangle-7-Copy-2" stroke-width="2">
+                            <rect stroke="#000000" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="4.76811594" y="1" width="59.2318841" height="74" rx="3"></rect>
+                            <rect stroke="#FFFFFF" x="2.76811594" y="-1" width="63.2318841" height="78" rx="3"></rect>
+                        </g>
+                        <rect id="Rectangle-8-Copy-15" fill="#000000" x="0" y="7.50617284" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-14" fill="#000000" x="0" y="15.0123457" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-13" fill="#000000" x="0" y="23.4567901" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-12" fill="#000000" x="0" y="31.9012346" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-11" fill="#000000" x="0" y="39.4074074" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-10" fill="#000000" x="0" y="47.8518519" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-9" fill="#000000" x="0" y="55.3580247" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <rect id="Rectangle-8-Copy-8" fill="#000000" x="0" y="63.8024691" width="8.47826087" height="2.81481481" rx="1.40740741"></rect>
+                        <ellipse id="Oval-3" stroke="#000000" stroke-width="2" cx="25.4347826" cy="51.6049383" rx="8.47826087" ry="8.44444444"></ellipse>
+                        <path d="M32.0289855,45.9753086 C37.3671498,39.833864 40.0362319,34.8297487 40.0362319,30.962963 C40.0362319,27.0961772 38.52664,22.092062 35.5074562,15.9506173" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M35.326087,14.5432099 L32.9710145,19.7037037" id="Line-2" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M35.326087,14.5432099 L40.5072464,16.8888889" id="Line-2-Copy" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M15.2438947,25.9732163 L15.2438947,31.1337101" id="Line-2-Copy-3" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(15.243895, 28.318895) rotate(45.000000) translate(-15.243895, -28.318895) "></path>
+                        <path d="M19.0120106,22.2201299 L19.0120106,27.3806237" id="Line-2-Copy-4" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(19.012011, 24.565809) rotate(45.000000) translate(-19.012011, -24.565809) "></path>
+                        <path d="M16.6569382,28.3188953 L21.8380976,28.3188953" id="Line-2-Copy-2" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(19.012011, 28.318895) rotate(45.000000) translate(-19.012011, -28.318895) "></path>
+                        <path d="M12.8888222,24.5658089 L18.0699816,24.5658089" id="Line-2-Copy-5" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(15.243895, 24.565809) rotate(45.000000) translate(-15.243895, -24.565809) "></path>
+                        <path d="M52.9250541,33.4793891 L52.9250541,38.639883" id="Line-2-Copy-3" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(52.925054, 35.825068) rotate(45.000000) translate(-52.925054, -35.825068) "></path>
+                        <path d="M56.6931701,29.7263027 L56.6931701,34.8867965" id="Line-2-Copy-4" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(56.693170, 32.071982) rotate(45.000000) translate(-56.693170, -32.071982) "></path>
+                        <path d="M54.3380976,35.8250681 L59.519257,35.8250681" id="Line-2-Copy-2" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(56.693170, 35.825068) rotate(45.000000) translate(-56.693170, -35.825068) "></path>
+                        <path d="M50.5699816,32.0719817 L55.7511411,32.0719817" id="Line-2-Copy-5" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(52.925054, 32.071982) rotate(45.000000) translate(-52.925054, -32.071982) "></path>
+                        <path d="M45.3888222,57.8744509 L45.3888222,63.0349447" id="Line-2-Copy-3" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(45.388822, 60.220130) rotate(45.000000) translate(-45.388822, -60.220130) "></path>
+                        <path d="M49.1569382,54.1213644 L49.1569382,59.2818583" id="Line-2-Copy-4" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(49.156938, 56.467043) rotate(45.000000) translate(-49.156938, -56.467043) "></path>
+                        <path d="M46.8018657,60.2201299 L51.9830251,60.2201299" id="Line-2-Copy-2" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(49.156938, 60.220130) rotate(45.000000) translate(-49.156938, -60.220130) "></path>
+                        <path d="M43.0337498,56.4670434 L48.2149092,56.4670434" id="Line-2-Copy-5" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(45.388822, 56.467043) rotate(45.000000) translate(-45.388822, -56.467043) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="66px" viewBox="0 0 117 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Devices</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Devices" transform="translate(2.000000, 1.000000)">
+            <g id="Laptop">
+                <path d="M4.32330827,58.3088235 L101.165414,58.3088235 C99.8639619,62.7696078 98.2042193,65 96.1861857,65 C70.0467067,65 36.1527301,65 8.8108655,65 C6.39636098,65 4.90050857,62.7696078 4.32330827,58.3088235 Z" id="Shadow" fill="#D3DEE5"></path>
+                <path d="M0,56.3970588 L96.8421053,56.3970588 C95.5406536,60.2205882 93.880911,62.1323529 91.8628774,62.1323529 C65.7233984,62.1323529 31.8294219,62.1323529 4.48755723,62.1323529 C2.07305271,62.1323529 0.577200295,60.2205882 0,56.3970588 Z" id="Keyboard" stroke="#000000" stroke-width="2"></path>
+                <path d="M9.05263158,0 L87.7894737,0 C89.4463279,-3.04359188e-16 90.7894737,1.34314575 90.7894737,3 L90.7894737,56.3970588 L6.05263158,56.3970588 L6.05263158,3 C6.05263158,1.34314575 7.39577733,3.04359188e-16 9.05263158,0 Z" id="Screen" stroke="#000000" stroke-width="2"></path>
+            </g>
+            <g id="Tablet-Copy" transform="translate(57.067669, 8.602941)">
+                <rect id="Rectangle-2-Copy-4" fill="#FFFFFF" x="0" y="0" width="57.9323308" height="56.3970588" rx="3"></rect>
+                <rect id="Rectangle-2-Copy-5" fill="#D3DEE5" x="6.05263158" y="5.73529412" width="35.4511278" height="50.6617647" rx="3"></rect>
+                <ellipse id="Oval-Copy" fill="#D3DEE5" cx="20.7518797" cy="50.1838235" rx="1.72932331" ry="2.38970588"></ellipse>
+                <rect id="Rectangle-2" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" x="3.45864662" y="2.86764706" width="35.4511278" height="50.6617647" rx="3"></rect>
+                <ellipse id="Oval" stroke="#000000" stroke-width="1.5" cx="21.1842105" cy="47.3161765" rx="2.16165414" ry="2.38970588"></ellipse>
+            </g>
+            <g id="Group-2" transform="translate(87.330827, 18.161765)">
+                <g id="Phone">
+                    <rect id="Rectangle-2-Copy-3" fill="#FFFFFF" x="0" y="0" width="22.481203" height="46.8382353" rx="3"></rect>
+                    <rect id="Rectangle-2-Copy" fill="#D3DEE5" x="5.18796992" y="5.73529412" width="22.481203" height="41.1029412" rx="3"></rect>
+                    <rect id="Rectangle-2" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" x="2.59398496" y="2.86764706" width="22.481203" height="41.1029412" rx="3"></rect>
+                    <ellipse id="Oval" stroke="#000000" stroke-width="1.5" cx="13.8345865" cy="38.2352941" rx="1.72932331" ry="1.91176471"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
