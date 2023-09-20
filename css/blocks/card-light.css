@@ -1,0 +1,12 @@
+.card-light {
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--space-m-l);
+  border-radius: var(--border-radius);
+  max-width: unset;
+}
+
+.card-light ::selection {
+  color: var(--color-dark);
+  background: var(--color-gold);
+}
