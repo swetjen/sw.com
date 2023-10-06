@@ -19,6 +19,7 @@ function build_assets () {
   cd api || exit 1
   export GOOS=linux
   export GOARCH=amd64
+  export CGO_ENABLED=0
   go build -ldflags="-s -w" -o release . || exit 1
 
   # Create Inbox
