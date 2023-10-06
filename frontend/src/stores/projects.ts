@@ -27,7 +27,7 @@ const projectsDefault: IProjectItem[] = [
   {
     logo: '/logos/tethr.svg',
     brand: 'Tethr',
-    title: 'AI-powered Conversation Intelligence',
+    title: 'AI Conversation Intelligence',
     titleExtended: 'Tethr is a platform that uses AI-powered conversation intelligence to help businesses improve customer interactions and drive better outcomes.',
     subtitle: 'Conversation intelligence to help businesses improve customer interactions.',
     heroImage: '/bg/tethr.webp',
