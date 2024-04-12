@@ -48,7 +48,7 @@
                 <div class="w-8 max-w-full text-sm mx-auto">
                     <TechLogo  name="Python 3" />
                 </div>
-                Python 3
+                Python
             </div>
             <div class="text-sm p-2 bg-gray-50 rounded h-18 space-x-2 flex flex-col h-full justify-between items-center">
                 <div class="w-12 max-w-full">
