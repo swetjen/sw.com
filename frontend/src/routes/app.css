@@ -5,8 +5,13 @@
 @layer base {
     @font-face {
         font-family: inter;
-        font-weight: 400;
+        font-weight: 300;
         src: url("/fonts/opensans-light.ttf")
+    }
+    @font-face {
+        font-family: inter;
+        font-weight: 400;
+        src: url("/fonts/opensans-regular.ttf")
     }
     @font-face {
         font-family: inter;
@@ -28,7 +33,7 @@ h1.card:hover {
 }
 
 h2 {
-    @apply text-xl md:text-2xl font-normal
+    @apply text-xl md:text-2xl font-medium
 }
 
 p a {

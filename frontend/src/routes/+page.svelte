@@ -182,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="my-10 md:mb-20 flex align-middle md:flex-row mx-10 flex-col">
+            <div class="my-10 md:mb-20 flex space-x-4 align-middle md:flex-row mx-10 flex-col">
                 <div class="flex-1 sm:w-full md:w-1/2">
                     <h1 class="mb-3 text-3xl font-bold md:mx-auto">{p.title}</h1>
                 </div>
