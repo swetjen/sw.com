@@ -9,7 +9,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['circe', 'ui-sans-serif', 'helvetica']
+      'sans': ['inter', 'ui-sans-serif', 'helvetica']
     },
     extend: {
       rotate: {

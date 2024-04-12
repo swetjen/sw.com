@@ -4,24 +4,14 @@
 
 @layer base {
     @font-face {
-        font-family: Circe;
-        font-weight: 300;
-        src: url("/fonts/circe-light.woff")
-    }
-    @font-face {
-        font-family: Circe;
+        font-family: inter;
         font-weight: 400;
-        src: url("/fonts/circe-regular.woff")
+        src: url("/fonts/opensans-light.ttf")
     }
     @font-face {
-        font-family: Circe;
+        font-family: inter;
         font-weight: 700;
-        src: url("/fonts/circe-bold.woff")
-    }
-    @font-face {
-        font-family: Dincondensed;
-        font-weight: 700;
-        src: url("/fonts/dincon-bold.woff")
+        src: url("/fonts/opensans-semibold.ttf")
     }
 }
 

@@ -175,9 +175,9 @@
 
     {#each $Projects as p (p.title)}
         <a class="my-10" href={p.slug}>
-            <div class="md:h-96 h-64 bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl "
+            <div class="md:h-96 h-64 bg-center bg-cover rounded-2xl transform-gpu hover:scale-95 duration-150 ease-in-out shadow-2xl hover:shadow-3xl"
                  style={`background-image: url('${p.heroImage}')`}>
-                <div class="w-full h-full flex flex-row text-center">&nbsp;
+                <div class="w-full h-full flex flex-row text-center relative ">&nbsp;
                     <img class="inline-block mx-auto opacity-90" width="125" src={p.logo}>
                 </div>
             </div>

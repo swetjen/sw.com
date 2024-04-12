@@ -4,6 +4,16 @@ import type { IProjectItem } from '../interfaces/all';
 
 
 const projectsDefault: IProjectItem[] = [
+  // {
+  //   logo: '',
+  //   brand: 'New Ape Times',
+  //   heroImage: '/bg/natimes.png',
+  //   title: 'New Ape Times',
+  //   titleExtended: 'An online booking platform that let guests browse, book and pay',
+  //   subtitle: 'An online rental reservations and booking platform.',
+  //   dates: '2020 - 2022',
+  //   slug: '/projects/bindel'
+  // },
   {
     logo: '/logos/bindel.svg',
     brand: 'The Bindel',
